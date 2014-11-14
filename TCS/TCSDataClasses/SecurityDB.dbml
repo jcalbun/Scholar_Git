@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tender" Class="SecurityDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BBTDEVSQLVT01;Initial Catalog=Tender;Persist Security Info=True;User ID=tenderuser" SettingsObjectName="TCSDataClasses.Properties.Settings" SettingsPropertyName="TenderConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.aplicaciones" Member="aplicaciones">
+    <Type Name="aplicacione">
+      <Column Name="codigo_aplicacion" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre_aplicacion" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="activa" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="version" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="aplicacione_profile" Member="profiles" ThisKey="codigo_aplicacion" OtherKey="application_id" Type="profile" />
+      <Association Name="aplicacione_usuarios_aplicacione" Member="usuarios_aplicaciones" ThisKey="codigo_aplicacion" OtherKey="codigo_aplicacion" Type="usuarios_aplicacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.profile" Member="profiles">
+    <Type Name="profile">
+      <Column Name="application_id" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="profile_id" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="profile_desc" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="service_scope" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="location_scope" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="usuario_creacion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_creacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_ult_act" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_ult_act" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="profile_profile_menu_option" Member="profile_menu_options" ThisKey="application_id,profile_id" OtherKey="application_id,profile_id" Type="profile_menu_option" />
+      <Association Name="aplicacione_profile" Member="aplicacione" ThisKey="application_id" OtherKey="codigo_aplicacion" Type="aplicacione" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios_aplicaciones" Member="usuarios_aplicaciones">
+    <Type Name="usuarios_aplicacione">
+      <Column Name="codigo_usuario" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="codigo_aplicacion" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tipo_usuario" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fecha_ultimo_acceso" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="intentos_hechos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_Intento_Fallido" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Bloqueado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="usuarios_aplicacione_usuarios_perfile" Member="usuarios_perfiles" ThisKey="codigo_usuario,codigo_aplicacion" OtherKey="codigo_usuario,codigo_aplicacion" Type="usuarios_perfile" />
+      <Association Name="aplicacione_usuarios_aplicacione" Member="aplicacione" ThisKey="codigo_aplicacion" OtherKey="codigo_aplicacion" Type="aplicacione" IsForeignKey="true" />
+      <Association Name="usuario_usuarios_aplicacione" Member="usuario" ThisKey="codigo_usuario" OtherKey="codigo_usuario" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios_perfiles" Member="usuarios_perfiles">
+    <Type Name="usuarios_perfile">
+      <Column Name="codigo_usuario" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_aplicacion" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_perfil" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_usuario" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="usuario_creacion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_creacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_ult_act" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_ult_act" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="perfil_servicios" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="perfil_localidades" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="codigo_naviera_csav" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Association Name="usuarios_aplicacione_usuarios_perfile" Member="usuarios_aplicacione" ThisKey="codigo_usuario,codigo_aplicacion" OtherKey="codigo_usuario,codigo_aplicacion" Type="usuarios_aplicacione" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.profile_menu_option" Member="profile_menu_options">
+    <Type Name="profile_menu_option">
+      <Column Name="application_id" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="profile_id" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="menu_option_id" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="menu_option_access" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_creacion" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_creacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_ult_act" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_hora_ult_act" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="no_access_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="read_only_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="insert_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="edit_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="delete_flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="profile_profile_menu_option" Member="profile" ThisKey="application_id,profile_id" OtherKey="application_id,profile_id" Type="profile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.almacena_password" Member="almacena_passwords">
+    <Type Name="almacena_password">
+      <Column Name="codigo_usuario" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_aplicacion" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="password_encriptada" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fecha_cambio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuario">
+      <Column Name="codigo_usuario" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_ult_password" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_perfil" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="usuario_usuarios_aplicacione" Member="usuarios_aplicaciones" ThisKey="codigo_usuario" OtherKey="codigo_usuario" Type="usuarios_aplicacione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Control_Tiempo_Acceso_web" Member="Control_Tiempo_Acceso_web">
+    <Type Name="Control_Tiempo_Acceso_web">
+      <Column Name="codigo_aplicacion" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="dias_vigencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dias_aviso_previo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usa_nueva_encriptacion" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="intentos_permitidos" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="password_almacenados" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="segundos_inactividad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="largo_minimo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="minutos_bloqueo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_insert_historial_password" Method="sp_insert_historial_password">
+    <Parameter Name="cod_usuario" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="cod_aplicacion" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="pass" Type="System.String" DbType="Char(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

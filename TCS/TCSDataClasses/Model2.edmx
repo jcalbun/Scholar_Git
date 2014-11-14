@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScholarTransportModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ScholarTransportModel1StoreContainer">
+          <EntitySet Name="apoderado" EntityType="ScholarTransportModel1.Store.apoderado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="apoderado_estudiante" EntityType="ScholarTransportModel1.Store.apoderado_estudiante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="establecimiento" EntityType="ScholarTransportModel1.Store.establecimiento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="establecimiento_estudiante" EntityType="ScholarTransportModel1.Store.establecimiento_estudiante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="estudiante" EntityType="ScholarTransportModel1.Store.estudiante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="trayecto" EntityType="ScholarTransportModel1.Store.trayecto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="trayecto_estudiante" EntityType="ScholarTransportModel1.Store.trayecto_estudiante" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_apoderado_estudiante_apoderado" Association="ScholarTransportModel1.Store.FK_apoderado_estudiante_apoderado">
+            <End Role="apoderado" EntitySet="apoderado" />
+            <End Role="apoderado_estudiante" EntitySet="apoderado_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_apoderado_estudiante_estudiante" Association="ScholarTransportModel1.Store.FK_apoderado_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="apoderado_estudiante" EntitySet="apoderado_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_establecimiento_estudiante_establecimiento" Association="ScholarTransportModel1.Store.FK_establecimiento_estudiante_establecimiento">
+            <End Role="establecimiento" EntitySet="establecimiento" />
+            <End Role="establecimiento_estudiante" EntitySet="establecimiento_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_establecimiento_estudiante_estudiante" Association="ScholarTransportModel1.Store.FK_establecimiento_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="establecimiento_estudiante" EntitySet="establecimiento_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_apoderado" Association="ScholarTransportModel1.Store.FK_trayecto_estudiante_apoderado">
+            <End Role="apoderado" EntitySet="apoderado" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_establecimiento" Association="ScholarTransportModel1.Store.FK_trayecto_estudiante_establecimiento">
+            <End Role="establecimiento" EntitySet="establecimiento" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_estudiante" Association="ScholarTransportModel1.Store.FK_trayecto_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_trayecto" Association="ScholarTransportModel1.Store.FK_trayecto_estudiante_trayecto">
+            <End Role="trayecto" EntitySet="trayecto" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="apoderado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="rut" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tiene_contrato" Type="char" MaxLength="1" />
+          <Property Name="id_tipo_parentezco" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="fotografia" Type="varbinary(max)" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="apoderado_estudiante">
+          <Key>
+            <PropertyRef Name="id_apoderado" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_apoderado" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="establecimiento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="tipo_establecimiento" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="establecimiento_estudiante">
+          <Key>
+            <PropertyRef Name="id_establecimiento" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_establecimiento" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="estudiante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="rut" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="nombres" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="apellidos" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="fotografia" Type="varbinary(max)" />
+          <Property Name="observaciones" Type="varchar" MaxLength="255" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trayecto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id_contacto_origen" Type="int" Nullable="false" />
+          <Property Name="id_contacto_destino" Type="int" Nullable="false" />
+          <Property Name="id_tipo_trayecto" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="dias_semana" Type="char" Nullable="false" MaxLength="7" />
+          <Property Name="hora_origen" Type="datetime" Nullable="false" />
+          <Property Name="hora_destino" Type="datetime" Nullable="false" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fechar_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="trayecto_estudiante">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+            <PropertyRef Name="id_trayecto" />
+            <PropertyRef Name="id_apoderado" />
+            <PropertyRef Name="id_establecimiento" />
+          </Key>
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="id_trayecto" Type="int" Nullable="false" />
+          <Property Name="id_apoderado" Type="int" Nullable="false" />
+          <Property Name="id_establecimiento" Type="int" Nullable="false" />
+          <Property Name="id_tipo_jornada" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="activo" Type="char" MaxLength="1" />
+          <Property Name="observaciones" Type="varchar" MaxLength="255" />
+          <Property Name="usuario_cr" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_cr" Type="datetime" Nullable="false" />
+          <Property Name="usuario_up" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_up" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_apoderado_estudiante_apoderado">
+          <End Role="apoderado" Type="ScholarTransportModel1.Store.apoderado" Multiplicity="1" />
+          <End Role="apoderado_estudiante" Type="ScholarTransportModel1.Store.apoderado_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apoderado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="apoderado_estudiante">
+              <PropertyRef Name="id_apoderado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_apoderado_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.Store.estudiante" Multiplicity="1" />
+          <End Role="apoderado_estudiante" Type="ScholarTransportModel1.Store.apoderado_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="apoderado_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_establecimiento_estudiante_establecimiento">
+          <End Role="establecimiento" Type="ScholarTransportModel1.Store.establecimiento" Multiplicity="1" />
+          <End Role="establecimiento_estudiante" Type="ScholarTransportModel1.Store.establecimiento_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="establecimiento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="establecimiento_estudiante">
+              <PropertyRef Name="id_establecimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_establecimiento_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.Store.estudiante" Multiplicity="1" />
+          <End Role="establecimiento_estudiante" Type="ScholarTransportModel1.Store.establecimiento_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="establecimiento_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_apoderado">
+          <End Role="apoderado" Type="ScholarTransportModel1.Store.apoderado" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.Store.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apoderado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_apoderado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_establecimiento">
+          <End Role="establecimiento" Type="ScholarTransportModel1.Store.establecimiento" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.Store.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="establecimiento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_establecimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.Store.estudiante" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.Store.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_trayecto">
+          <End Role="trayecto" Type="ScholarTransportModel1.Store.trayecto" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.Store.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trayecto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_trayecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScholarTransportModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="ScholarTransportEntities1">
+          <EntitySet Name="apoderado" EntityType="ScholarTransportModel1.apoderado" />
+          <EntitySet Name="apoderado_estudiante" EntityType="ScholarTransportModel1.apoderado_estudiante" />
+          <EntitySet Name="establecimiento" EntityType="ScholarTransportModel1.establecimiento" />
+          <EntitySet Name="establecimiento_estudiante" EntityType="ScholarTransportModel1.establecimiento_estudiante" />
+          <EntitySet Name="estudiante" EntityType="ScholarTransportModel1.estudiante" />
+          <EntitySet Name="trayecto" EntityType="ScholarTransportModel1.trayecto" />
+          <EntitySet Name="trayecto_estudiante" EntityType="ScholarTransportModel1.trayecto_estudiante" />
+          <AssociationSet Name="FK_apoderado_estudiante_apoderado" Association="ScholarTransportModel1.FK_apoderado_estudiante_apoderado">
+            <End Role="apoderado" EntitySet="apoderado" />
+            <End Role="apoderado_estudiante" EntitySet="apoderado_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_apoderado" Association="ScholarTransportModel1.FK_trayecto_estudiante_apoderado">
+            <End Role="apoderado" EntitySet="apoderado" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_apoderado_estudiante_estudiante" Association="ScholarTransportModel1.FK_apoderado_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="apoderado_estudiante" EntitySet="apoderado_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_establecimiento_estudiante_establecimiento" Association="ScholarTransportModel1.FK_establecimiento_estudiante_establecimiento">
+            <End Role="establecimiento" EntitySet="establecimiento" />
+            <End Role="establecimiento_estudiante" EntitySet="establecimiento_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_establecimiento" Association="ScholarTransportModel1.FK_trayecto_estudiante_establecimiento">
+            <End Role="establecimiento" EntitySet="establecimiento" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_establecimiento_estudiante_estudiante" Association="ScholarTransportModel1.FK_establecimiento_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="establecimiento_estudiante" EntitySet="establecimiento_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_estudiante" Association="ScholarTransportModel1.FK_trayecto_estudiante_estudiante">
+            <End Role="estudiante" EntitySet="estudiante" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trayecto_estudiante_trayecto" Association="ScholarTransportModel1.FK_trayecto_estudiante_trayecto">
+            <End Role="trayecto" EntitySet="trayecto" />
+            <End Role="trayecto_estudiante" EntitySet="trayecto_estudiante" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="apoderado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rut" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="tiene_contrato" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="id_tipo_parentezco" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="fotografia" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="apoderado_estudiante" Relationship="ScholarTransportModel1.FK_apoderado_estudiante_apoderado" FromRole="apoderado" ToRole="apoderado_estudiante" />
+          <NavigationProperty Name="trayecto_estudiante" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_apoderado" FromRole="apoderado" ToRole="trayecto_estudiante" />
+        </EntityType>
+        <EntityType Name="apoderado_estudiante">
+          <Key>
+            <PropertyRef Name="id_apoderado" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_apoderado" Type="Int32" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="apoderado" Relationship="ScholarTransportModel1.FK_apoderado_estudiante_apoderado" FromRole="apoderado_estudiante" ToRole="apoderado" />
+          <NavigationProperty Name="estudiante" Relationship="ScholarTransportModel1.FK_apoderado_estudiante_estudiante" FromRole="apoderado_estudiante" ToRole="estudiante" />
+        </EntityType>
+        <EntityType Name="establecimiento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="tipo_establecimiento" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="establecimiento_estudiante" Relationship="ScholarTransportModel1.FK_establecimiento_estudiante_establecimiento" FromRole="establecimiento" ToRole="establecimiento_estudiante" />
+          <NavigationProperty Name="trayecto_estudiante" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_establecimiento" FromRole="establecimiento" ToRole="trayecto_estudiante" />
+        </EntityType>
+        <EntityType Name="establecimiento_estudiante">
+          <Key>
+            <PropertyRef Name="id_establecimiento" />
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_establecimiento" Type="Int32" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="establecimiento" Relationship="ScholarTransportModel1.FK_establecimiento_estudiante_establecimiento" FromRole="establecimiento_estudiante" ToRole="establecimiento" />
+          <NavigationProperty Name="estudiante" Relationship="ScholarTransportModel1.FK_establecimiento_estudiante_estudiante" FromRole="establecimiento_estudiante" ToRole="estudiante" />
+        </EntityType>
+        <EntityType Name="estudiante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="rut" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="nombres" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="apellidos" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="fotografia" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="observaciones" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="apoderado_estudiante" Relationship="ScholarTransportModel1.FK_apoderado_estudiante_estudiante" FromRole="estudiante" ToRole="apoderado_estudiante" />
+          <NavigationProperty Name="establecimiento_estudiante" Relationship="ScholarTransportModel1.FK_establecimiento_estudiante_estudiante" FromRole="estudiante" ToRole="establecimiento_estudiante" />
+          <NavigationProperty Name="trayecto_estudiante" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_estudiante" FromRole="estudiante" ToRole="trayecto_estudiante" />
+        </EntityType>
+        <EntityType Name="trayecto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id_contacto_origen" Type="Int32" Nullable="false" />
+          <Property Name="id_contacto_destino" Type="Int32" Nullable="false" />
+          <Property Name="id_tipo_trayecto" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="dias_semana" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="true" />
+          <Property Name="hora_origen" Type="DateTime" Nullable="false" />
+          <Property Name="hora_destino" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fechar_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="trayecto_estudiante" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_trayecto" FromRole="trayecto" ToRole="trayecto_estudiante" />
+        </EntityType>
+        <EntityType Name="trayecto_estudiante">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+            <PropertyRef Name="id_trayecto" />
+            <PropertyRef Name="id_apoderado" />
+            <PropertyRef Name="id_establecimiento" />
+          </Key>
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="id_trayecto" Type="Int32" Nullable="false" />
+          <Property Name="id_apoderado" Type="Int32" Nullable="false" />
+          <Property Name="id_establecimiento" Type="Int32" Nullable="false" />
+          <Property Name="id_tipo_jornada" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="activo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="observaciones" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="usuario_cr" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_cr" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_up" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_up" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="apoderado" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_apoderado" FromRole="trayecto_estudiante" ToRole="apoderado" />
+          <NavigationProperty Name="establecimiento" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_establecimiento" FromRole="trayecto_estudiante" ToRole="establecimiento" />
+          <NavigationProperty Name="estudiante" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_estudiante" FromRole="trayecto_estudiante" ToRole="estudiante" />
+          <NavigationProperty Name="trayecto" Relationship="ScholarTransportModel1.FK_trayecto_estudiante_trayecto" FromRole="trayecto_estudiante" ToRole="trayecto" />
+        </EntityType>
+        <Association Name="FK_apoderado_estudiante_apoderado">
+          <End Role="apoderado" Type="ScholarTransportModel1.apoderado" Multiplicity="1" />
+          <End Role="apoderado_estudiante" Type="ScholarTransportModel1.apoderado_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apoderado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="apoderado_estudiante">
+              <PropertyRef Name="id_apoderado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_apoderado">
+          <End Role="apoderado" Type="ScholarTransportModel1.apoderado" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apoderado">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_apoderado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_apoderado_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.estudiante" Multiplicity="1" />
+          <End Role="apoderado_estudiante" Type="ScholarTransportModel1.apoderado_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="apoderado_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_establecimiento_estudiante_establecimiento">
+          <End Role="establecimiento" Type="ScholarTransportModel1.establecimiento" Multiplicity="1" />
+          <End Role="establecimiento_estudiante" Type="ScholarTransportModel1.establecimiento_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="establecimiento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="establecimiento_estudiante">
+              <PropertyRef Name="id_establecimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_establecimiento">
+          <End Role="establecimiento" Type="ScholarTransportModel1.establecimiento" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="establecimiento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_establecimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_establecimiento_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.estudiante" Multiplicity="1" />
+          <End Role="establecimiento_estudiante" Type="ScholarTransportModel1.establecimiento_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="establecimiento_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_estudiante">
+          <End Role="estudiante" Type="ScholarTransportModel1.estudiante" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estudiante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trayecto_estudiante_trayecto">
+          <End Role="trayecto" Type="ScholarTransportModel1.trayecto" Multiplicity="1" />
+          <End Role="trayecto_estudiante" Type="ScholarTransportModel1.trayecto_estudiante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trayecto">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trayecto_estudiante">
+              <PropertyRef Name="id_trayecto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="ScholarTransportModel1StoreContainer" CdmEntityContainer="ScholarTransportEntities1">
+          <EntitySetMapping Name="apoderado"><EntityTypeMapping TypeName="ScholarTransportModel1.apoderado"><MappingFragment StoreEntitySet="apoderado">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="rut" ColumnName="rut" />
+            <ScalarProperty Name="nombres" ColumnName="nombres" />
+            <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+            <ScalarProperty Name="tiene_contrato" ColumnName="tiene_contrato" />
+            <ScalarProperty Name="id_tipo_parentezco" ColumnName="id_tipo_parentezco" />
+            <ScalarProperty Name="fotografia" ColumnName="fotografia" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="apoderado_estudiante"><EntityTypeMapping TypeName="ScholarTransportModel1.apoderado_estudiante"><MappingFragment StoreEntitySet="apoderado_estudiante">
+            <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+            <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="establecimiento"><EntityTypeMapping TypeName="ScholarTransportModel1.establecimiento"><MappingFragment StoreEntitySet="establecimiento">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+            <ScalarProperty Name="tipo_establecimiento" ColumnName="tipo_establecimiento" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="establecimiento_estudiante"><EntityTypeMapping TypeName="ScholarTransportModel1.establecimiento_estudiante"><MappingFragment StoreEntitySet="establecimiento_estudiante">
+            <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="estudiante"><EntityTypeMapping TypeName="ScholarTransportModel1.estudiante"><MappingFragment StoreEntitySet="estudiante">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="rut" ColumnName="rut" />
+            <ScalarProperty Name="nombres" ColumnName="nombres" />
+            <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+            <ScalarProperty Name="fotografia" ColumnName="fotografia" />
+            <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="trayecto"><EntityTypeMapping TypeName="ScholarTransportModel1.trayecto"><MappingFragment StoreEntitySet="trayecto">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="id_contacto_origen" ColumnName="id_contacto_origen" />
+            <ScalarProperty Name="id_contacto_destino" ColumnName="id_contacto_destino" />
+            <ScalarProperty Name="id_tipo_trayecto" ColumnName="id_tipo_trayecto" />
+            <ScalarProperty Name="dias_semana" ColumnName="dias_semana" />
+            <ScalarProperty Name="hora_origen" ColumnName="hora_origen" />
+            <ScalarProperty Name="hora_destino" ColumnName="hora_destino" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fechar_cr" ColumnName="fechar_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="trayecto_estudiante"><EntityTypeMapping TypeName="ScholarTransportModel1.trayecto_estudiante"><MappingFragment StoreEntitySet="trayecto_estudiante">
+            <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            <ScalarProperty Name="id_trayecto" ColumnName="id_trayecto" />
+            <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+            <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            <ScalarProperty Name="id_tipo_jornada" ColumnName="id_tipo_jornada" />
+            <ScalarProperty Name="activo" ColumnName="activo" />
+            <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+            <ScalarProperty Name="usuario_cr" ColumnName="usuario_cr" />
+            <ScalarProperty Name="fecha_cr" ColumnName="fecha_cr" />
+            <ScalarProperty Name="usuario_up" ColumnName="usuario_up" />
+            <ScalarProperty Name="fecha_up" ColumnName="fecha_up" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_apoderado_estudiante_apoderado" TypeName="ScholarTransportModel1.FK_apoderado_estudiante_apoderado" StoreEntitySet="apoderado_estudiante">
+            <EndProperty Name="apoderado">
+              <ScalarProperty Name="id" ColumnName="id_apoderado" />
+            </EndProperty>
+            <EndProperty Name="apoderado_estudiante">
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_trayecto_estudiante_apoderado" TypeName="ScholarTransportModel1.FK_trayecto_estudiante_apoderado" StoreEntitySet="trayecto_estudiante">
+            <EndProperty Name="apoderado">
+              <ScalarProperty Name="id" ColumnName="id_apoderado" />
+            </EndProperty>
+            <EndProperty Name="trayecto_estudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              <ScalarProperty Name="id_trayecto" ColumnName="id_trayecto" />
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_apoderado_estudiante_estudiante" TypeName="ScholarTransportModel1.FK_apoderado_estudiante_estudiante" StoreEntitySet="apoderado_estudiante">
+            <EndProperty Name="estudiante">
+              <ScalarProperty Name="id" ColumnName="id_estudiante" />
+            </EndProperty>
+            <EndProperty Name="apoderado_estudiante">
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_establecimiento_estudiante_establecimiento" TypeName="ScholarTransportModel1.FK_establecimiento_estudiante_establecimiento" StoreEntitySet="establecimiento_estudiante">
+            <EndProperty Name="establecimiento">
+              <ScalarProperty Name="id" ColumnName="id_establecimiento" />
+            </EndProperty>
+            <EndProperty Name="establecimiento_estudiante">
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_trayecto_estudiante_establecimiento" TypeName="ScholarTransportModel1.FK_trayecto_estudiante_establecimiento" StoreEntitySet="trayecto_estudiante">
+            <EndProperty Name="establecimiento">
+              <ScalarProperty Name="id" ColumnName="id_establecimiento" />
+            </EndProperty>
+            <EndProperty Name="trayecto_estudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              <ScalarProperty Name="id_trayecto" ColumnName="id_trayecto" />
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_establecimiento_estudiante_estudiante" TypeName="ScholarTransportModel1.FK_establecimiento_estudiante_estudiante" StoreEntitySet="establecimiento_estudiante">
+            <EndProperty Name="estudiante">
+              <ScalarProperty Name="id" ColumnName="id_estudiante" />
+            </EndProperty>
+            <EndProperty Name="establecimiento_estudiante">
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_trayecto_estudiante_estudiante" TypeName="ScholarTransportModel1.FK_trayecto_estudiante_estudiante" StoreEntitySet="trayecto_estudiante">
+            <EndProperty Name="estudiante">
+              <ScalarProperty Name="id" ColumnName="id_estudiante" />
+            </EndProperty>
+            <EndProperty Name="trayecto_estudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              <ScalarProperty Name="id_trayecto" ColumnName="id_trayecto" />
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_trayecto_estudiante_trayecto" TypeName="ScholarTransportModel1.FK_trayecto_estudiante_trayecto" StoreEntitySet="trayecto_estudiante">
+            <EndProperty Name="trayecto">
+              <ScalarProperty Name="id" ColumnName="id_trayecto" />
+            </EndProperty>
+            <EndProperty Name="trayecto_estudiante">
+              <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+              <ScalarProperty Name="id_trayecto" ColumnName="id_trayecto" />
+              <ScalarProperty Name="id_apoderado" ColumnName="id_apoderado" />
+              <ScalarProperty Name="id_establecimiento" ColumnName="id_establecimiento" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model2">
+        <EntityTypeShape EntityType="ScholarTransportModel1.apoderado" Width="1.5" PointX="0.75" PointY="10" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.apoderado_estudiante" Width="1.5" PointX="3" PointY="5.375" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.establecimiento" Width="1.5" PointX="0.75" PointY="14.25" Height="2.7494921874999978" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.establecimiento_estudiante" Width="1.5" PointX="6" PointY="5.375" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.estudiante" Width="1.5" PointX="0.75" PointY="5" Height="3.5186979166666665" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.trayecto" Width="1.5" PointX="0.75" PointY="17.75" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel1.trayecto_estudiante" Width="1.5" PointX="3" PointY="0.75" Height="3.9033007812499996" IsExpanded="true" />
+        <AssociationConnector Association="ScholarTransportModel1.FK_apoderado_estudiante_apoderado" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.759348958333334" />
+          <ConnectorPoint PointX="2.6041666666666665" PointY="11.759348958333332" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="11.759348958333334" />
+          <ConnectorPoint PointX="3.75" PointY="11.759348958333334" />
+          <ConnectorPoint PointX="3.75" PointY="7.9321907552083317" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_trayecto_estudiante_apoderado" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.001152846153847" />
+          <ConnectorPoint PointX="2.625" PointY="9.6261528461538468" />
+          <ConnectorPoint PointX="2.625" PointY="2.701650390625" />
+          <ConnectorPoint PointX="3" PointY="2.701650390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_apoderado_estudiante_estudiante" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.6535953776041659" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="6.653595377604165" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="6.6535953776041659" />
+          <ConnectorPoint PointX="3" PointY="6.6535953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_establecimiento_estudiante_establecimiento" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.624746093749998" />
+          <ConnectorPoint PointX="2.6041666666666665" PointY="15.624746093749998" />
+          <ConnectorPoint PointX="2.7708333333333335" PointY="15.624746093749998" />
+          <ConnectorPoint PointX="6.75" PointY="15.624746093749998" />
+          <ConnectorPoint PointX="6.75" PointY="7.9321907552083335" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_trayecto_estudiante_establecimiento" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.313460538461539" />
+          <ConnectorPoint PointX="2.6285744349011204" PointY="13.934886103560421" />
+          <ConnectorPoint PointX="2.7464255650988791" PointY="13.817034973362665" />
+          <ConnectorPoint PointX="2.8125" PointY="13.750960538461541" />
+          <ConnectorPoint PointX="2.8125" PointY="3.7087275859375004" />
+          <ConnectorPoint PointX="3" PointY="3.7087275859375004" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_establecimiento_estudiante_estudiante" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.2566968359375" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="8.2566968359374986" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="8.2566968359375" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="8.2566968359375" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="8.2566968359375" />
+          <ConnectorPoint PointX="6.3437475" PointY="8.2566968359375" />
+          <ConnectorPoint PointX="6.3437475" PointY="7.9321907552083335" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_trayecto_estudiante_estudiante" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="5" />
+          <ConnectorPoint PointX="1.5" PointY="1.6945726953124991" />
+          <ConnectorPoint PointX="3" PointY="1.6945726953124991" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel1.FK_trayecto_estudiante_trayecto" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="17.813460538461534" />
+          <ConnectorPoint PointX="2.6875" PointY="17.375960538461534" />
+          <ConnectorPoint PointX="2.6875" PointY="4.2122661835937505" />
+          <ConnectorPoint PointX="2.7291666666666665" PointY="4.21226618359375" />
+          <ConnectorPoint PointX="2.8958333333333335" PointY="4.2122661835937505" />
+          <ConnectorPoint PointX="3" PointY="4.2122661835937505" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

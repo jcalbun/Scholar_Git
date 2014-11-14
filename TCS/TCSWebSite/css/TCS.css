@@ -1,0 +1,231 @@
+﻿/*************************************************************************/
+				/* (Modified) CSAV Classes */
+/*************************************************************************/
+
+.HeaderApplicationName {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.HeaderUserNameDate {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.TextBoxRead {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #210e4c;
+	background-color: #f1f4f9;
+	border: 1px solid #899cc5;
+}
+
+.TextBoxWrite {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #667ba9;
+}
+
+/*1.3.2   Drop-Down List*/
+.DropDownListRead {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #ACA899;
+	background-color: #FFFFFF;
+	border: 1px solid #899cc5;
+}
+
+.DropDownListWrite {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #899cc5;
+}
+
+/*1.3.3   Check Box*/
+.CheckBoxRead	{
+	font-family: tahoma, verdana, arial, helvetica;
+	color: #ACA899;
+	background-color: #FFFFFF;
+	border: 1px solid #899cc5;
+}
+
+.CheckBoxWrite	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size :small ;
+	color: #899cc5;
+	
+	
+}
+
+/*1.3.4   Radio Button*/
+.RadioButtonRead	{
+	font-family: tahoma, verdana, arial, helvetica;
+	color: #A8AC99;
+	background-color: #FFFFFF;
+	border: 1px solid #899cc5;
+}
+
+.RadioButtonWrite	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #000000;
+}
+
+.LabelFormName {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #396DCE;
+}
+
+.LabelSectionTitle {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFFFFF;
+	background-color: #639ACE;
+	border-color: #4a67a0;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.LabelGroupTitle {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #0056B3;
+	background-color: #DDDDDD;
+}
+
+.Label {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px ;
+	color: #210e4c;
+	
+}
+
+/*1.3.7   Botón*/
+.Button {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color :Red;
+	border: 1px solid #024A9B;
+	background-color: #D6E7FF;
+	width: 40px;
+	height: 19px;
+}
+
+/*1.3.9   Grilla*/
+.GridHeader  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #3F98D8;
+	border: 1px solid #FFFFFF;
+	background-color: #C9D6E4;
+}
+
+.ColumnHeader{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #3F98D8;
+	background-color: #C9D6E4;
+}
+
+.GridDetail1  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #FDFDFD;
+	display:block;
+}
+
+.GridDetail2  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #ECF2EF;
+	display:block;
+}
+
+.NoGridDetail2  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #ECF2EF;
+	display:none;
+}
+
+.GridHiperlink  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	text-decoration: underline;
+	color: #5E00F9;
+	border: 1px solid #FFFFFF;
+}
+
+.GridRowsPerPage {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #3E67BE;
+	background-color: #DDDDDD;
+}
+
+.GridGoPage1	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	text-decoration: underline;
+	color: #669999;
+	background-color:#D7D7D7;
+}
+
+.GridGoPage2	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	text-decoration: underline;
+	color: #000066;
+	background-color:#D7D7D7;
+}
+
+.GridPageItemInfo	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #3E67BE;
+	background-color: #DDDDDD;
+}
+
+.LabelRead {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+.panel {
+	background-color :#dfe6f4;
+	border-style:solid;
+	border-width:1px;
+	border-color: #4a67a0;
+}
+        
+.listbox {
+	font-size :small ;
+}
+
+.LabelWhite
+{
+    font-family     : tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #FFFFFF;
+}
+

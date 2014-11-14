@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ScholarTransportModel4.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ScholarTransportModel4StoreContainer">
+          <EntitySet Name="aplicaciones" EntityType="ScholarTransportModel4.Store.aplicaciones" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="option_application" EntityType="ScholarTransportModel4.Store.option_application" store:Type="Tables" store:Schema="dbo" store:Name="option_application">
+            <DefiningQuery>SELECT 
+      [option_application].[menuOptionId] AS [menuOptionId], 
+      [option_application].[description] AS [description], 
+      [option_application].[levelId] AS [levelId], 
+      [option_application].[PageUrl] AS [PageUrl], 
+      [option_application].[menuMasterOptionId] AS [menuMasterOptionId]
+      FROM [dbo].[option_application] AS [option_application]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="profile" EntityType="ScholarTransportModel4.Store.profile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="profile_menu_option" EntityType="ScholarTransportModel4.Store.profile_menu_option" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="usuarios" EntityType="ScholarTransportModel4.Store.usuarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="usuarios_aplicaciones" EntityType="ScholarTransportModel4.Store.usuarios_aplicaciones" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="usuarios_perfiles" EntityType="ScholarTransportModel4.Store.usuarios_perfiles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_profile_aplicaciones" Association="ScholarTransportModel4.Store.FK_profile_aplicaciones">
+            <End Role="aplicaciones" EntitySet="aplicaciones" />
+            <End Role="profile" EntitySet="profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_profile_menu_option_profile" Association="ScholarTransportModel4.Store.FK_profile_menu_option_profile">
+            <End Role="profile" EntitySet="profile" />
+            <End Role="profile_menu_option" EntitySet="profile_menu_option" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_aplicaciones_aplicaciones" Association="ScholarTransportModel4.Store.FK_usuarios_aplicaciones_aplicaciones">
+            <End Role="aplicaciones" EntitySet="aplicaciones" />
+            <End Role="usuarios_aplicaciones" EntitySet="usuarios_aplicaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_aplicaciones_usuarios" Association="ScholarTransportModel4.Store.FK_usuarios_aplicaciones_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="usuarios_aplicaciones" EntitySet="usuarios_aplicaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_perfiles_profile" Association="ScholarTransportModel4.Store.FK_usuarios_perfiles_profile">
+            <End Role="profile" EntitySet="profile" />
+            <End Role="usuarios_perfiles" EntitySet="usuarios_perfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_perfiles_usuarios" Association="ScholarTransportModel4.Store.FK_usuarios_perfiles_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="usuarios_perfiles" EntitySet="usuarios_perfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="aplicaciones">
+          <Key>
+            <PropertyRef Name="codigo_aplicacion" />
+          </Key>
+          <Property Name="codigo_aplicacion" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="nombre_aplicacion" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="activa" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="version" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ScholarTransport.dbo.option_application' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="option_application">
+          <Key>
+            <PropertyRef Name="menuOptionId" />
+          </Key>
+          <Property Name="menuOptionId" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="description" Type="varchar" MaxLength="50" />
+          <Property Name="levelId" Type="int" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="100" />
+          <Property Name="menuMasterOptionId" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="profile">
+          <Key>
+            <PropertyRef Name="application_id" />
+            <PropertyRef Name="profile_id" />
+          </Key>
+          <Property Name="application_id" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="profile_id" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="profile_desc" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="service_scope" Type="char" MaxLength="2" />
+          <Property Name="location_scope" Type="char" MaxLength="2" />
+          <Property Name="usuario_creacion" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_creacion" Type="datetime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_ult_act" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="profile_menu_option">
+          <Key>
+            <PropertyRef Name="application_id" />
+            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="menu_option_id" />
+          </Key>
+          <Property Name="application_id" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="profile_id" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="menu_option_id" Type="char" Nullable="false" MaxLength="20" />
+          <Property Name="menu_option_access" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="usuario_creacion" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_creacion" Type="datetime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_ult_act" Type="datetime" Nullable="false" />
+          <Property Name="no_access_flag" Type="char" MaxLength="1" />
+          <Property Name="read_only_flag" Type="char" MaxLength="1" />
+          <Property Name="insert_flag" Type="char" MaxLength="1" />
+          <Property Name="edit_flag" Type="char" MaxLength="1" />
+          <Property Name="delete_flag" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+          </Key>
+          <Property Name="codigo_usuario" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="nombre" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="estado" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="usuario_creacion" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_creacion" Type="datetime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_ult_act" Type="datetime" Nullable="false" />
+          <Property Name="fecha_ult_password" Type="datetime" Nullable="false" />
+          <Property Name="codigo_perfil" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="password" Type="char" Nullable="false" MaxLength="20" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="password_encriptada" Type="image" />
+        </EntityType>
+        <EntityType Name="usuarios_aplicaciones">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+            <PropertyRef Name="codigo_aplicacion" />
+          </Key>
+          <Property Name="codigo_usuario" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="codigo_aplicacion" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="fecha_inicio" Type="datetime" />
+          <Property Name="fecha_fin" Type="datetime" />
+          <Property Name="tipo_usuario" Type="char" MaxLength="1" />
+          <Property Name="fecha_ultimo_acceso" Type="datetime" />
+          <Property Name="intentos_hechos" Type="int" />
+          <Property Name="Fecha_Intento_Fallido" Type="datetime" />
+          <Property Name="Bloqueado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="usuarios_perfiles">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+            <PropertyRef Name="codigo_aplicacion" />
+            <PropertyRef Name="codigo_perfil" />
+          </Key>
+          <Property Name="codigo_usuario" Type="char" Nullable="false" MaxLength="15" />
+          <Property Name="codigo_aplicacion" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="codigo_perfil" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="tipo_usuario" Type="char" MaxLength="1" />
+          <Property Name="fecha_inicio" Type="datetime" />
+          <Property Name="fecha_fin" Type="datetime" />
+          <Property Name="usuario_creacion" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_creacion" Type="datetime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="fecha_hora_ult_act" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_profile_aplicaciones">
+          <End Role="aplicaciones" Type="ScholarTransportModel4.Store.aplicaciones" Multiplicity="1" />
+          <End Role="profile" Type="ScholarTransportModel4.Store.profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Principal>
+            <Dependent Role="profile">
+              <PropertyRef Name="application_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_profile_menu_option_profile">
+          <End Role="profile" Type="ScholarTransportModel4.Store.profile" Multiplicity="1" />
+          <End Role="profile_menu_option" Type="ScholarTransportModel4.Store.profile_menu_option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profile">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Principal>
+            <Dependent Role="profile_menu_option">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_aplicaciones_aplicaciones">
+          <End Role="aplicaciones" Type="ScholarTransportModel4.Store.aplicaciones" Multiplicity="1" />
+          <End Role="usuarios_aplicaciones" Type="ScholarTransportModel4.Store.usuarios_aplicaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Principal>
+            <Dependent Role="usuarios_aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_aplicaciones_usuarios">
+          <End Role="usuarios" Type="ScholarTransportModel4.Store.usuarios" Multiplicity="1" />
+          <End Role="usuarios_aplicaciones" Type="ScholarTransportModel4.Store.usuarios_aplicaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="codigo_usuario" />
+            </Principal>
+            <Dependent Role="usuarios_aplicaciones">
+              <PropertyRef Name="codigo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_perfiles_profile">
+          <End Role="profile" Type="ScholarTransportModel4.Store.profile" Multiplicity="1" />
+          <End Role="usuarios_perfiles" Type="ScholarTransportModel4.Store.usuarios_perfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profile">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Principal>
+            <Dependent Role="usuarios_perfiles">
+              <PropertyRef Name="codigo_aplicacion" />
+              <PropertyRef Name="codigo_perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_perfiles_usuarios">
+          <End Role="usuarios" Type="ScholarTransportModel4.Store.usuarios" Multiplicity="1" />
+          <End Role="usuarios_perfiles" Type="ScholarTransportModel4.Store.usuarios_perfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="codigo_usuario" />
+            </Principal>
+            <Dependent Role="usuarios_perfiles">
+              <PropertyRef Name="codigo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ScholarTransportModel4" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="ScholarTransportEntities4">
+          <EntitySet Name="aplicaciones" EntityType="ScholarTransportModel4.aplicaciones" />
+          <EntitySet Name="option_application" EntityType="ScholarTransportModel4.option_application" />
+          <EntitySet Name="profile" EntityType="ScholarTransportModel4.profile" />
+          <EntitySet Name="profile_menu_option" EntityType="ScholarTransportModel4.profile_menu_option" />
+          <EntitySet Name="usuarios" EntityType="ScholarTransportModel4.usuarios" />
+          <EntitySet Name="usuarios_aplicaciones" EntityType="ScholarTransportModel4.usuarios_aplicaciones" />
+          <EntitySet Name="usuarios_perfiles" EntityType="ScholarTransportModel4.usuarios_perfiles" />
+          <AssociationSet Name="FK_profile_aplicaciones" Association="ScholarTransportModel4.FK_profile_aplicaciones">
+            <End Role="aplicaciones" EntitySet="aplicaciones" />
+            <End Role="profile" EntitySet="profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_aplicaciones_aplicaciones" Association="ScholarTransportModel4.FK_usuarios_aplicaciones_aplicaciones">
+            <End Role="aplicaciones" EntitySet="aplicaciones" />
+            <End Role="usuarios_aplicaciones" EntitySet="usuarios_aplicaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_profile_menu_option_profile" Association="ScholarTransportModel4.FK_profile_menu_option_profile">
+            <End Role="profile" EntitySet="profile" />
+            <End Role="profile_menu_option" EntitySet="profile_menu_option" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_perfiles_profile" Association="ScholarTransportModel4.FK_usuarios_perfiles_profile">
+            <End Role="profile" EntitySet="profile" />
+            <End Role="usuarios_perfiles" EntitySet="usuarios_perfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_aplicaciones_usuarios" Association="ScholarTransportModel4.FK_usuarios_aplicaciones_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="usuarios_aplicaciones" EntitySet="usuarios_aplicaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_usuarios_perfiles_usuarios" Association="ScholarTransportModel4.FK_usuarios_perfiles_usuarios">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="usuarios_perfiles" EntitySet="usuarios_perfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="aplicaciones">
+          <Key>
+            <PropertyRef Name="codigo_aplicacion" />
+          </Key>
+          <Property Name="codigo_aplicacion" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="nombre_aplicacion" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="activa" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="version" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="profile" Relationship="ScholarTransportModel4.FK_profile_aplicaciones" FromRole="aplicaciones" ToRole="profile" />
+          <NavigationProperty Name="usuarios_aplicaciones" Relationship="ScholarTransportModel4.FK_usuarios_aplicaciones_aplicaciones" FromRole="aplicaciones" ToRole="usuarios_aplicaciones" />
+        </EntityType>
+        <EntityType Name="option_application">
+          <Key>
+            <PropertyRef Name="menuOptionId" />
+          </Key>
+          <Property Name="menuOptionId" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="levelId" Type="Int32" />
+          <Property Name="PageUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="menuMasterOptionId" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="profile">
+          <Key>
+            <PropertyRef Name="application_id" />
+            <PropertyRef Name="profile_id" />
+          </Key>
+          <Property Name="application_id" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="profile_id" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="profile_desc" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="service_scope" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="location_scope" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="usuario_creacion" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_creacion" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_ult_act" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="aplicaciones" Relationship="ScholarTransportModel4.FK_profile_aplicaciones" FromRole="profile" ToRole="aplicaciones" />
+          <NavigationProperty Name="profile_menu_option" Relationship="ScholarTransportModel4.FK_profile_menu_option_profile" FromRole="profile" ToRole="profile_menu_option" />
+          <NavigationProperty Name="usuarios_perfiles" Relationship="ScholarTransportModel4.FK_usuarios_perfiles_profile" FromRole="profile" ToRole="usuarios_perfiles" />
+        </EntityType>
+        <EntityType Name="profile_menu_option">
+          <Key>
+            <PropertyRef Name="application_id" />
+            <PropertyRef Name="profile_id" />
+            <PropertyRef Name="menu_option_id" />
+          </Key>
+          <Property Name="application_id" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="profile_id" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="menu_option_id" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="menu_option_access" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="usuario_creacion" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_creacion" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_ult_act" Type="DateTime" Nullable="false" />
+          <Property Name="no_access_flag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="read_only_flag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="insert_flag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="edit_flag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="delete_flag" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="profile" Relationship="ScholarTransportModel4.FK_profile_menu_option_profile" FromRole="profile_menu_option" ToRole="profile" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+          </Key>
+          <Property Name="codigo_usuario" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="estado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="usuario_creacion" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_creacion" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_ult_act" Type="DateTime" Nullable="false" />
+          <Property Name="fecha_ult_password" Type="DateTime" Nullable="false" />
+          <Property Name="codigo_perfil" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="password_encriptada" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="usuarios_aplicaciones" Relationship="ScholarTransportModel4.FK_usuarios_aplicaciones_usuarios" FromRole="usuarios" ToRole="usuarios_aplicaciones" />
+          <NavigationProperty Name="usuarios_perfiles" Relationship="ScholarTransportModel4.FK_usuarios_perfiles_usuarios" FromRole="usuarios" ToRole="usuarios_perfiles" />
+        </EntityType>
+        <EntityType Name="usuarios_aplicaciones">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+            <PropertyRef Name="codigo_aplicacion" />
+          </Key>
+          <Property Name="codigo_usuario" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="codigo_aplicacion" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_inicio" Type="DateTime" />
+          <Property Name="fecha_fin" Type="DateTime" />
+          <Property Name="tipo_usuario" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_ultimo_acceso" Type="DateTime" />
+          <Property Name="intentos_hechos" Type="Int32" />
+          <Property Name="Fecha_Intento_Fallido" Type="DateTime" />
+          <Property Name="Bloqueado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="aplicaciones" Relationship="ScholarTransportModel4.FK_usuarios_aplicaciones_aplicaciones" FromRole="usuarios_aplicaciones" ToRole="aplicaciones" />
+          <NavigationProperty Name="usuarios" Relationship="ScholarTransportModel4.FK_usuarios_aplicaciones_usuarios" FromRole="usuarios_aplicaciones" ToRole="usuarios" />
+        </EntityType>
+        <EntityType Name="usuarios_perfiles">
+          <Key>
+            <PropertyRef Name="codigo_usuario" />
+            <PropertyRef Name="codigo_aplicacion" />
+            <PropertyRef Name="codigo_perfil" />
+          </Key>
+          <Property Name="codigo_usuario" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="true" />
+          <Property Name="codigo_aplicacion" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="codigo_perfil" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="tipo_usuario" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="fecha_inicio" Type="DateTime" />
+          <Property Name="fecha_fin" Type="DateTime" />
+          <Property Name="usuario_creacion" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_creacion" Type="DateTime" Nullable="false" />
+          <Property Name="usuario_ult_act" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_hora_ult_act" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="profile" Relationship="ScholarTransportModel4.FK_usuarios_perfiles_profile" FromRole="usuarios_perfiles" ToRole="profile" />
+          <NavigationProperty Name="usuarios" Relationship="ScholarTransportModel4.FK_usuarios_perfiles_usuarios" FromRole="usuarios_perfiles" ToRole="usuarios" />
+        </EntityType>
+        <Association Name="FK_profile_aplicaciones">
+          <End Role="aplicaciones" Type="ScholarTransportModel4.aplicaciones" Multiplicity="1" />
+          <End Role="profile" Type="ScholarTransportModel4.profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Principal>
+            <Dependent Role="profile">
+              <PropertyRef Name="application_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_aplicaciones_aplicaciones">
+          <End Role="aplicaciones" Type="ScholarTransportModel4.aplicaciones" Multiplicity="1" />
+          <End Role="usuarios_aplicaciones" Type="ScholarTransportModel4.usuarios_aplicaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Principal>
+            <Dependent Role="usuarios_aplicaciones">
+              <PropertyRef Name="codigo_aplicacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_profile_menu_option_profile">
+          <End Role="profile" Type="ScholarTransportModel4.profile" Multiplicity="1" />
+          <End Role="profile_menu_option" Type="ScholarTransportModel4.profile_menu_option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profile">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Principal>
+            <Dependent Role="profile_menu_option">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_perfiles_profile">
+          <End Role="profile" Type="ScholarTransportModel4.profile" Multiplicity="1" />
+          <End Role="usuarios_perfiles" Type="ScholarTransportModel4.usuarios_perfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profile">
+              <PropertyRef Name="application_id" />
+              <PropertyRef Name="profile_id" />
+            </Principal>
+            <Dependent Role="usuarios_perfiles">
+              <PropertyRef Name="codigo_aplicacion" />
+              <PropertyRef Name="codigo_perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_aplicaciones_usuarios">
+          <End Role="usuarios" Type="ScholarTransportModel4.usuarios" Multiplicity="1" />
+          <End Role="usuarios_aplicaciones" Type="ScholarTransportModel4.usuarios_aplicaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="codigo_usuario" />
+            </Principal>
+            <Dependent Role="usuarios_aplicaciones">
+              <PropertyRef Name="codigo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_usuarios_perfiles_usuarios">
+          <End Role="usuarios" Type="ScholarTransportModel4.usuarios" Multiplicity="1" />
+          <End Role="usuarios_perfiles" Type="ScholarTransportModel4.usuarios_perfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="codigo_usuario" />
+            </Principal>
+            <Dependent Role="usuarios_perfiles">
+              <PropertyRef Name="codigo_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="ScholarTransportModel4StoreContainer" CdmEntityContainer="ScholarTransportEntities4">
+          <EntitySetMapping Name="aplicaciones"><EntityTypeMapping TypeName="ScholarTransportModel4.aplicaciones"><MappingFragment StoreEntitySet="aplicaciones">
+            <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            <ScalarProperty Name="nombre_aplicacion" ColumnName="nombre_aplicacion" />
+            <ScalarProperty Name="activa" ColumnName="activa" />
+            <ScalarProperty Name="version" ColumnName="version" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="option_application"><EntityTypeMapping TypeName="ScholarTransportModel4.option_application"><MappingFragment StoreEntitySet="option_application">
+            <ScalarProperty Name="menuOptionId" ColumnName="menuOptionId" />
+            <ScalarProperty Name="description" ColumnName="description" />
+            <ScalarProperty Name="levelId" ColumnName="levelId" />
+            <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+            <ScalarProperty Name="menuMasterOptionId" ColumnName="menuMasterOptionId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="profile"><EntityTypeMapping TypeName="ScholarTransportModel4.profile"><MappingFragment StoreEntitySet="profile">
+            <ScalarProperty Name="application_id" ColumnName="application_id" />
+            <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+            <ScalarProperty Name="profile_desc" ColumnName="profile_desc" />
+            <ScalarProperty Name="service_scope" ColumnName="service_scope" />
+            <ScalarProperty Name="location_scope" ColumnName="location_scope" />
+            <ScalarProperty Name="usuario_creacion" ColumnName="usuario_creacion" />
+            <ScalarProperty Name="fecha_hora_creacion" ColumnName="fecha_hora_creacion" />
+            <ScalarProperty Name="usuario_ult_act" ColumnName="usuario_ult_act" />
+            <ScalarProperty Name="fecha_hora_ult_act" ColumnName="fecha_hora_ult_act" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="profile_menu_option"><EntityTypeMapping TypeName="ScholarTransportModel4.profile_menu_option"><MappingFragment StoreEntitySet="profile_menu_option">
+            <ScalarProperty Name="application_id" ColumnName="application_id" />
+            <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+            <ScalarProperty Name="menu_option_id" ColumnName="menu_option_id" />
+            <ScalarProperty Name="menu_option_access" ColumnName="menu_option_access" />
+            <ScalarProperty Name="usuario_creacion" ColumnName="usuario_creacion" />
+            <ScalarProperty Name="fecha_hora_creacion" ColumnName="fecha_hora_creacion" />
+            <ScalarProperty Name="usuario_ult_act" ColumnName="usuario_ult_act" />
+            <ScalarProperty Name="fecha_hora_ult_act" ColumnName="fecha_hora_ult_act" />
+            <ScalarProperty Name="no_access_flag" ColumnName="no_access_flag" />
+            <ScalarProperty Name="read_only_flag" ColumnName="read_only_flag" />
+            <ScalarProperty Name="insert_flag" ColumnName="insert_flag" />
+            <ScalarProperty Name="edit_flag" ColumnName="edit_flag" />
+            <ScalarProperty Name="delete_flag" ColumnName="delete_flag" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="usuarios"><EntityTypeMapping TypeName="ScholarTransportModel4.usuarios"><MappingFragment StoreEntitySet="usuarios">
+            <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+            <ScalarProperty Name="nombre" ColumnName="nombre" />
+            <ScalarProperty Name="estado" ColumnName="estado" />
+            <ScalarProperty Name="usuario_creacion" ColumnName="usuario_creacion" />
+            <ScalarProperty Name="fecha_hora_creacion" ColumnName="fecha_hora_creacion" />
+            <ScalarProperty Name="usuario_ult_act" ColumnName="usuario_ult_act" />
+            <ScalarProperty Name="fecha_hora_ult_act" ColumnName="fecha_hora_ult_act" />
+            <ScalarProperty Name="fecha_ult_password" ColumnName="fecha_ult_password" />
+            <ScalarProperty Name="codigo_perfil" ColumnName="codigo_perfil" />
+            <ScalarProperty Name="password" ColumnName="password" />
+            <ScalarProperty Name="email" ColumnName="email" />
+            <ScalarProperty Name="password_encriptada" ColumnName="password_encriptada" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="usuarios_aplicaciones"><EntityTypeMapping TypeName="ScholarTransportModel4.usuarios_aplicaciones"><MappingFragment StoreEntitySet="usuarios_aplicaciones">
+            <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+            <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+            <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+            <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
+            <ScalarProperty Name="fecha_ultimo_acceso" ColumnName="fecha_ultimo_acceso" />
+            <ScalarProperty Name="intentos_hechos" ColumnName="intentos_hechos" />
+            <ScalarProperty Name="Fecha_Intento_Fallido" ColumnName="Fecha_Intento_Fallido" />
+            <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="usuarios_perfiles"><EntityTypeMapping TypeName="ScholarTransportModel4.usuarios_perfiles"><MappingFragment StoreEntitySet="usuarios_perfiles">
+            <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+            <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            <ScalarProperty Name="codigo_perfil" ColumnName="codigo_perfil" />
+            <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
+            <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+            <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+            <ScalarProperty Name="usuario_creacion" ColumnName="usuario_creacion" />
+            <ScalarProperty Name="fecha_hora_creacion" ColumnName="fecha_hora_creacion" />
+            <ScalarProperty Name="usuario_ult_act" ColumnName="usuario_ult_act" />
+            <ScalarProperty Name="fecha_hora_ult_act" ColumnName="fecha_hora_ult_act" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_profile_aplicaciones" TypeName="ScholarTransportModel4.FK_profile_aplicaciones" StoreEntitySet="profile">
+            <EndProperty Name="aplicaciones">
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="application_id" />
+            </EndProperty>
+            <EndProperty Name="profile">
+              <ScalarProperty Name="application_id" ColumnName="application_id" />
+              <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuarios_aplicaciones_aplicaciones" TypeName="ScholarTransportModel4.FK_usuarios_aplicaciones_aplicaciones" StoreEntitySet="usuarios_aplicaciones">
+            <EndProperty Name="aplicaciones">
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            </EndProperty>
+            <EndProperty Name="usuarios_aplicaciones">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_profile_menu_option_profile" TypeName="ScholarTransportModel4.FK_profile_menu_option_profile" StoreEntitySet="profile_menu_option">
+            <EndProperty Name="profile">
+              <ScalarProperty Name="application_id" ColumnName="application_id" />
+              <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+            </EndProperty>
+            <EndProperty Name="profile_menu_option">
+              <ScalarProperty Name="application_id" ColumnName="application_id" />
+              <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+              <ScalarProperty Name="menu_option_id" ColumnName="menu_option_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuarios_perfiles_profile" TypeName="ScholarTransportModel4.FK_usuarios_perfiles_profile" StoreEntitySet="usuarios_perfiles">
+            <EndProperty Name="profile">
+              <ScalarProperty Name="application_id" ColumnName="codigo_aplicacion" />
+              <ScalarProperty Name="profile_id" ColumnName="codigo_perfil" />
+            </EndProperty>
+            <EndProperty Name="usuarios_perfiles">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+              <ScalarProperty Name="codigo_perfil" ColumnName="codigo_perfil" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuarios_aplicaciones_usuarios" TypeName="ScholarTransportModel4.FK_usuarios_aplicaciones_usuarios" StoreEntitySet="usuarios_aplicaciones">
+            <EndProperty Name="usuarios">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+            </EndProperty>
+            <EndProperty Name="usuarios_aplicaciones">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_usuarios_perfiles_usuarios" TypeName="ScholarTransportModel4.FK_usuarios_perfiles_usuarios" StoreEntitySet="usuarios_perfiles">
+            <EndProperty Name="usuarios">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+            </EndProperty>
+            <EndProperty Name="usuarios_perfiles">
+              <ScalarProperty Name="codigo_usuario" ColumnName="codigo_usuario" />
+              <ScalarProperty Name="codigo_aplicacion" ColumnName="codigo_aplicacion" />
+              <ScalarProperty Name="codigo_perfil" ColumnName="codigo_perfil" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model5">
+        <EntityTypeShape EntityType="ScholarTransportModel4.aplicaciones" Width="1.5" PointX="0.75" PointY="6.125" Height="2.1725878906250005" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.option_application" Width="1.5" PointX="5.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.profile" Width="1.5" PointX="3" PointY="5.625" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.profile_menu_option" Width="1.5" PointX="5.25" PointY="5.375" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.usuarios" Width="1.5" PointX="0.75" PointY="1.375" Height="3.7109993489583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.usuarios_aplicaciones" Width="1.5" PointX="3" PointY="1.625" Height="3.1340950520833322" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScholarTransportModel4.usuarios_perfiles" Width="1.5" PointX="8.25" PointY="5.625" Height="3.3263964843749996" IsExpanded="true" />
+        <AssociationConnector Association="ScholarTransportModel4.FK_profile_aplicaciones" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.2112939453125" />
+          <ConnectorPoint PointX="3" PointY="7.2112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel4.FK_usuarios_aplicaciones_aplicaciones" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.125" />
+          <ConnectorPoint PointX="2.625" PointY="5.75" />
+          <ConnectorPoint PointX="2.625" PointY="3.1920475260416659" />
+          <ConnectorPoint PointX="3" PointY="3.1920475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel4.FK_profile_menu_option_profile" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.2881982421875" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="7.2881982421874989" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="7.2881982421875" />
+          <ConnectorPoint PointX="5.25" PointY="7.2881982421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel4.FK_usuarios_perfiles_profile" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.4253471210937487" />
+          <ConnectorPoint PointX="5" PointY="6.4253471210937487" />
+          <ConnectorPoint PointX="5" PointY="9.3359993489583317" />
+          <ConnectorPoint PointX="9" PointY="9.3359993489583317" />
+          <ConnectorPoint PointX="9" PointY="8.951396484375" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel4.FK_usuarios_aplicaciones_usuarios" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.3460237630208329" />
+          <ConnectorPoint PointX="3" PointY="2.3460237630208329" />
+        </AssociationConnector>
+        <AssociationConnector Association="ScholarTransportModel4.FK_usuarios_perfiles_usuarios" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.9537972005208326" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="4.9537972005208317" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="4.9537972005208326" />
+          <ConnectorPoint PointX="9" PointY="4.9537972005208326" />
+          <ConnectorPoint PointX="9" PointY="5.625" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

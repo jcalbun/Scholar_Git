@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TCSBusinessEntities.be_Apoderado">
+    <Position X="20.25" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gIAAAgIAAAQQIAAAABBAAABAAKIQKAAAIAAAoAAABgA=</HashCode>
+      <FileName>be_Apoderado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Contacto">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Members" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAgAQAAAACQIBAgCABAAAAABAJAKAAAAgAAgAAABgE=</HashCode>
+      <FileName>be_Contacto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Establecimiento">
+    <Position X="3" Y="5.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQIAAEAAFAAAAAAAKAKAAAAAAAgAgABgA=</HashCode>
+      <FileName>be_Establecimiento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Ayudante">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gIAAAgIAAAQQIAAAABBAAABAAKIAKAAAAAAAgAAABgA=</HashCode>
+      <FileName>be_Ayudante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Conductor">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gIAAAgIAAAQQIAAAABBAAABAAKIAKAAAAAAAgAAABgA=</HashCode>
+      <FileName>be_Conductor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Estudiante">
+    <Position X="5" Y="9.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="TCSBusinessEntities.be_Apoderado" ManuallyRouted="true">
+      <Path>
+        <Point X="21" Y="5.165" />
+        <Point X="21" Y="9.568" />
+        <Point X="5.75" Y="9.568" />
+        <Point X="5.75" Y="9.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gIAAAgIAAAQQIAAAABRAAABAAKIAKAAAAAAAgAAADgA=</HashCode>
+      <FileName>be_Estudiante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Contrato">
+    <Position X="22.25" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>iAAEACAAAAAQIAABAAZAAAAAAAIBKgAIAgAA8AIIDgg=</HashCode>
+      <FileName>be_Contrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_EstablecimientoEstudiante">
+    <Position X="2.5" Y="9.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAABAAAAAQIAABgABAAAAAAAIAKAAAAAAAkAAABAA=</HashCode>
+      <FileName>be_EstablecimientoEstudiante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Trayecto">
+    <Position X="18" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAIAAIQYAAAAApAAAAAAAIAOAIAAAAAiUAABgA=</HashCode>
+      <FileName>be_Trayecto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TrayectoAyudante">
+    <Position X="15" Y="10" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAQBAAAQAAQIAAAAABAAAAAAAIAKAAQAAAAgAAABgA=</HashCode>
+      <FileName>be_TrayectoAyudante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TrayectoConductor">
+    <Position X="20.25" Y="10" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAQIAAAAABAAAAAAAIAKAAQAAAAgAQABgA=</HashCode>
+      <FileName>be_TrayectoConductor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TrayectoEstudiante">
+    <Position X="17.5" Y="10" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAQIAABAABAAAAAAAIAKAAQAAAAkAAABgA=</HashCode>
+      <FileName>be_TrayectoEstudiante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TrayectoMinibus">
+    <Position X="23" Y="10" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAQIAAAAADAAAAAAAIAKAAQAAAAgAAQBgA=</HashCode>
+      <FileName>be_TrayectoMinibus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Ruta">
+    <Position X="12.75" Y="10" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAQIAAEAAVAAAAAAAIAKAgAAAAAgAAADgA=</HashCode>
+      <FileName>be_Ruta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Pagos">
+    <Position X="24.25" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAgBAAgAAQgQIggAAAxAAAEIAAKAKAAAAQABhAAADgg=</HashCode>
+      <FileName>be_Pagos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TipoEgreso">
+    <Position X="26.25" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQIAAEAAFAAAAAAAIAKAAAAAAAgAAABgA=</HashCode>
+      <FileName>be_TipoEgreso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_TipoIngreso">
+    <Position X="28.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQIAAEAAFAAAAAAAIAKAAAAAAAgAAABgA=</HashCode>
+      <FileName>be_TipoIngreso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Ingreso">
+    <Position X="28.5" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gACBAIAAAAAQIkAEAA1AAAEBAgIAKAAAgAAAhAAADgA=</HashCode>
+      <FileName>be_Ingreso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TCSBusinessEntities.be_Egreso">
+    <Position X="26.25" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAABAAAAABAQIgAEAI1AIAEAQAIAKAAAAgAAhAAADwA=</HashCode>
+      <FileName>be_Egreso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

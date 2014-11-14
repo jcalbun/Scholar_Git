@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8277A938-2E26-45AE-A240-394B74C0B8B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCSBusinessEntities</RootNamespace>
+    <AssemblyName>TCSBusinessEntities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/TCSBusinessEntities/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="be_Apoderado.cs" />
+    <Compile Include="be_ApoderadoEstudiante.cs" />
+    <Compile Include="be_ApplicationUser.cs" />
+    <Compile Include="be_Ayudante.cs" />
+    <Compile Include="be_Conductor.cs" />
+    <Compile Include="be_Contacto.cs" />
+    <Compile Include="be_ContactoApoderado.cs" />
+    <Compile Include="be_ContactoAyudante.cs" />
+    <Compile Include="be_ContactoConductor.cs" />
+    <Compile Include="be_ContactoEstablecimiento.cs" />
+    <Compile Include="be_Contrato.cs" />
+    <Compile Include="be_Control_Tiempo_Acceso.cs" />
+    <Compile Include="be_Egreso.cs" />
+    <Compile Include="be_Establecimiento.cs" />
+    <Compile Include="be_EstablecimientoEstudiante.cs" />
+    <Compile Include="be_Estudiante.cs" />
+    <Compile Include="be_FechaPagoServicio.cs" />
+    <Compile Include="be_Ingreso.cs" />
+    <Compile Include="be_Log.cs" />
+    <Compile Include="be_LogDetail.cs" />
+    <Compile Include="be_Minibus.cs" />
+    <Compile Include="be_Option.cs" />
+    <Compile Include="be_OptionApplication.cs" />
+    <Compile Include="be_Pagos.cs" />
+    <Compile Include="be_Parameter.cs" />
+    <Compile Include="be_Profile.cs" />
+    <Compile Include="be_RequestContent.cs" />
+    <Compile Include="be_RequestUpload.cs" />
+    <Compile Include="be_RequestUploadStatus.cs" />
+    <Compile Include="be_ResponseDownloadCsv.cs" />
+    <Compile Include="be_ResponseDownloadSummary.cs" />
+    <Compile Include="be_Ruta.cs" />
+    <Compile Include="be_TenderRequest.cs" />
+    <Compile Include="be_TenderRequestCost.cs" />
+    <Compile Include="be_TenderRequestRoute.cs" />
+    <Compile Include="be_TipoEgreso.cs" />
+    <Compile Include="be_TipoEstablecimiento.cs" />
+    <Compile Include="be_TipoIngreso.cs" />
+    <Compile Include="be_TipoJornada.cs" />
+    <Compile Include="be_TipoParentesco.cs" />
+    <Compile Include="be_TipoTrayecto.cs" />
+    <Compile Include="be_Trayecto.cs" />
+    <Compile Include="be_TrayectoAyudante.cs" />
+    <Compile Include="be_TrayectoConductor.cs" />
+    <Compile Include="be_TrayectoEstudiante.cs" />
+    <Compile Include="be_TrayectoMinibus.cs" />
+    <Compile Include="be_User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cd_BusinessEntities.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

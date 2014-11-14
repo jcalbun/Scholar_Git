@@ -1,0 +1,10 @@
+C:\Proyectos\TCS\TCSDataContract\bin\Debug\TCSDataContract.dll
+C:\Proyectos\TCS\TCSDataContract\bin\Debug\TCSDataContract.pdb
+C:\Proyectos\TCS\TCSDataContract\obj\Debug\ResolveAssemblyReference.cache
+C:\Proyectos\TCS\TCSDataContract\obj\Debug\TCSDataContract.dll
+C:\Proyectos\TCS\TCSDataContract\obj\Debug\TCSDataContract.pdb
+C:\CodeMangusta\TCS\TCSDataContract\bin\Debug\TCSDataContract.dll
+C:\CodeMangusta\TCS\TCSDataContract\bin\Debug\TCSDataContract.pdb
+C:\CodeMangusta\TCS\TCSDataContract\obj\Debug\TCSDataContract.dll
+C:\CodeMangusta\TCS\TCSDataContract\obj\Debug\TCSDataContract.pdb
+C:\CodeMangusta\TCS\TCSDataContract\obj\Debug\TCSDataContract.csprojResolveAssemblyReference.cache

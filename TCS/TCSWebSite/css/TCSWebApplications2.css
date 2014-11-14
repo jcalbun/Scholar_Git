@@ -1,0 +1,493 @@
+﻿/*1.1.1   Encabezado*/
+.HeaderApplicationName {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.HeaderUserNameDate {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+/*1.1.2   Pie de Página*/
+.Footer {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #999ACE;
+	background-color: #F3F3F3;
+	text-align :center ;
+}
+/*1.1.3   Area de Trabajo*/
+.WindowBackground {
+	background-color: #FFFFFF;
+}
+/*1.2   Mensajes de Error*/
+.ErrorMessage1 {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: none;
+	color: #FF0000;
+}
+.ErrorMessage2 {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: none;
+	color: #FFFF00;
+}
+/*1.3   Controles Gráficos*/
+.TextBoxRead {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #ACA899;
+	background-color: #9CB5E7;
+	border: 1px solid #000080;
+}
+.TextBoxWrite {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000080;
+}
+/*1.3.2   Drop-Down List*/
+.DropDownListRead {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #ACA899;
+	background-color: #FFFFFF;
+	border: 1px solid #000080;
+}
+.DropDownListWrite {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	background-color: #ACA899;
+	border: 1px solid #000080;
+}
+/*1.3.3   Check Box*/
+.CheckBoxRead	{
+	font-family: tahoma, verdana, arial, helvetica;
+	color: #565051;
+	background-color: #FFFFFF;
+	border: 1px solid #000080;
+}
+.CheckBoxWrite	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size :small ;
+	color: #000000;
+	
+
+
+}
+/*1.3.4   Radio Button*/
+.RadioButtonRead	{
+	font-family: tahoma, verdana, arial, helvetica;
+	color: #565051;
+	background-color: #FFFFFF;
+	border: 1px solid #000080;
+}
+.RadioButtonWrite	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #000000;
+}
+/*1.3.5   Calendar*/
+.CalendarBackground {
+	background-color: #6699CC;
+	padding: 1px;
+	spacing: 1px; 
+	height: 190px;
+	width: 170px;
+	border: double;
+	bgcolor: #BEBEBE;
+	margin: 1px;
+	font-size: 9px;
+	overflow:hidden;	
+}
+.CalendarButtonsMove{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;	
+	color: #000000;
+	background-color: #F6F6F2;
+	border: 1px solid #003C74;
+}
+.CalendarWeekDays	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #FFFFFF;
+	background-color: #778899;
+	border: 0px;
+	text-align: center;
+}
+.CalendarWorkingDays1	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;	
+	color: #000000;
+	background-color: #E5E5E5;
+	border: 1px solid #778899;
+	text-align: center;		
+}
+.CalendarWorkingDays2	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;	
+	color: #BFC0C0;
+	background-color: #E5E5E5;
+	border: 1px solid #778899;
+	text-align: center;	
+}
+.CalendarNonWorkingDays1	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;	
+	color: #000000;
+	background-color: #99CCFF;
+	border: 1px solid #778899;
+	text-align: center;		
+}
+.CalendarNonWorkingDays2	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;	
+	color: #C0C0C0;
+	background-color: #99CCFF;
+	border: 1px solid #778899;
+	text-align: center;		
+}
+.CalendarCurrentDay {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #000000;
+	border: 1px solid #778899;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.CalendarEnteredDay {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #000000;
+	border: 2px solid #DB5141;
+	background-color: #FFFFFF;
+	text-align: center;	
+}
+.CalendarCursorDay {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #000000;
+	border: 1px solid #778899;
+	background-color: #FFFF00;
+	text-align: center;		
+}
+.CalendarToday {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9.5px;
+	color: #FFFFFF;
+	background-color: #6699CC;
+	text-align: center;		
+}
+/*1.3.6   Label*/
+.LabelFormName {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #396DCE;
+}
+.LabelSectionTitle {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFFFFF;
+	background-color: #639ACE;
+}
+.LabelGroupTitle {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #0056B3;
+	background-color: #DDDDDD;
+}
+.Label {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #000000;	
+}
+
+.LabelRead{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #565051;
+	background-color: #9CB5E8;
+}
+/*1.3.7   Botón*/
+.Button {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color :Red;
+	border: 1px solid #024A9B;
+	background-color: #D6E7FF;
+    height: 19px;
+}
+/*1.3.8   Tab*/
+.TabInactive {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #FFFFFF;
+	border: 1px solid #2B7BC5;
+	background-color: #FFFFFF;
+}
+/*1.3.9   Grilla*/
+.GridHeader  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #3F98D8;
+	border: 1px solid #FFFFFF;
+	background-color: #C9D6E4;
+}
+.ColumnHeader{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #3F98D8;
+	background-color: #C9D6E4;
+}
+.GridDetail1  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:none;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #FDFDFD;
+	display:block;
+}
+.GridDetail2  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:none;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #ECF2EF;
+	display:block;
+}
+.NoGridDetail2  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:none;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #ECF2EF;
+	display:none;
+}
+.GridHiperlink  {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-decoration: underline;
+	color: #5E00F9;
+	border: 1px solid #FFFFFF;
+}
+.GridRowsPerPage {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 9px;
+	color: #3E67BE;
+	background-color: #DDDDDD;
+}
+.GridGoPage1	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-decoration: underline;
+	color: #669999;
+	background-color:D7D7D7;
+}
+.GridGoPage2	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-decoration: underline;
+	color: #000066;
+	background-color:D7D7D7;
+}
+.GridPageItemInfo	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #3E67BE;
+	background-color: #DDDDDD;
+}
+/*1.3.10   Progress Bar*/
+.ProgressBar	{
+	border: 1px solid #686868;
+	background-color: #EBE8D6;
+}
+/*1.3.11   Tooltip (Hint)*/
+.Tooltip	{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #000000;
+	border: 1px solid #000000;
+	background-color:FEFEE1;
+}
+/* añadido el 09/11/2007 para el menu arbol*/
+
+
+
+.div_arbol {
+   
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 10px;
+	font-weight:bold;
+	color: #FFFFFF;
+	background-color: #336699;
+	overflow: auto;
+	width:170px;
+	height:450px; 
+	vertical-align:top; 
+	
+	
+	
+}
+
+
+
+.TreeviewClass 
+{	
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: black;
+	background-color: #336699;
+	 vertical-align:top;
+
+
+	
+    }
+.nodoPadre 
+{	
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: black;
+	background-color: #D6E7FF;
+	border:1 px solid;
+	border-color:Black;
+	width:140px;
+	height:18px;
+    }
+.nodoHijo 
+{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #ffffff;
+	background-color: #336699;
+	width:140px;
+	height:18px;
+	border:none;
+	border-collapse:collapse
+    
+    }
+    .SelectedNode
+    {
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #ffffff;
+	background-color: #F3F3F3;
+	width:140px;
+	height:18px;
+    border-color:Black;
+	border:1 px solid;
+    }
+    
+    .HoverStyle
+     {
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	color: #ffffff;
+	background-color: #639ACE;
+	width:140px;
+	height:18px;
+    border-color:#ffffff;
+	border:1 px solid;
+    }
+    .GridDetail6 {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:none;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+	background-color: #FDFDFD;
+	
+}
+
+.ColTipo {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #3E67BE;
+	background-color: #DDDDDD;
+	width:350px;
+	border: 0.3px solid white;
+}
+
+.ColPuerto{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 0.3px solid #FFFFFF;
+	background-color: #ECF2EF;
+}
+
+.ColViaje	
+{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 0.3px solid #FFFFFF;
+	background-color: #FDFDFD;
+	}
+	
+	.Blanco	
+   {
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: #666666;
+	border: 0.3px solid #FFFFFF;
+	background-color: white;
+	}
+	.Verde	
+   {
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color: white;
+	border: 0.3px solid #FFFFFF;
+	background-color: #669933;
+	}
+	
+.divMenu
+{
+		background-color: #336699;
+	height: 88px;
+}
+.panel
+{
+	background-color :#9CB5E7;
+}
+.tdLikeMenu
+{
+	background-color : #336699;
+	 color : #FFFFFF;
+	 vertical-align:top ;
+	 
+}
+.listbox
+{
+	font-size :small ;
+}
+.LabelWhite
+{
+     font-family     : tahoma, verdana, arial, helvetica;
+	font-size:small ;
+	color: #FFFFFF;
+}
+.modalBackground {
+background-color:#000;
+filter:alpha(opacity=70);
+opacity:0.8;
+}

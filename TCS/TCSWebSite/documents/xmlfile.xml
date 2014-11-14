@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Rutas>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>20</id_estudiante>
+    <estudiante>CLAVERO TORRES AGUSTIN ANTONIO</estudiante>
+    <id_contacto_origen>23</id_contacto_origen>
+    <direccion_origen>REPUBLICA 225 RAHUE ALTO</direccion_origen>
+    <telefono_origen>5698559865-     </telefono_origen>
+    <hora_origen>8:00</hora_origen>
+    <id_establecimiento>1</id_establecimiento>
+    <nombre_establecimiento>COLEGIO SAN JOSE</nombre_establecimiento>
+    <direccion_destino>SAN JUAN BAUSTITSTA 68 SECTOR HOSPITAL</direccion_destino>
+    <telefono_destino>92238910-.</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>19</id_estudiante>
+    <estudiante>LIRA CARVAJAL JOSE ALEJANDRO</estudiante>
+    <id_contacto_origen>24</id_contacto_origen>
+    <direccion_origen>DIEGO PORTALES 611 CERRO BARON</direccion_origen>
+    <telefono_origen>8776523--</telefono_origen>
+    <hora_origen>8:00</hora_origen>
+    <id_establecimiento>3</id_establecimiento>
+    <nombre_establecimiento>ESCUELA GARCIA H. DE MENDOZA</nombre_establecimiento>
+    <direccion_destino>ALSACIA 900 NEMECIO ANTUNEZ</direccion_destino>
+    <telefono_destino>.-987765572</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>21</id_estudiante>
+    <estudiante>POBLETE SANTELICES FELIPE ANDRES</estudiante>
+    <id_contacto_origen>25</id_contacto_origen>
+    <direccion_origen>ELEUTERIO RAMIREZ 398 SECTOR MIRASUR</direccion_origen>
+    <telefono_origen>7556767-230989</telefono_origen>
+    <hora_origen>7:25</hora_origen>
+    <id_establecimiento>2</id_establecimiento>
+    <nombre_establecimiento>ESCUELA N128 ITALIA</nombre_establecimiento>
+    <direccion_destino>BACH 1001 ESQUINA VERDI</direccion_destino>
+    <telefono_destino>338901-60987652</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>22</id_estudiante>
+    <estudiante>POBLETE SANTELICES GLORIA ANGELA</estudiante>
+    <id_contacto_origen>25</id_contacto_origen>
+    <direccion_origen>ELEUTERIO RAMIREZ 398 SECTOR MIRASUR</direccion_origen>
+    <telefono_origen>7556767-230989</telefono_origen>
+    <hora_origen>8:00</hora_origen>
+    <id_establecimiento>2</id_establecimiento>
+    <nombre_establecimiento>ESCUELA N128 ITALIA</nombre_establecimiento>
+    <direccion_destino>BACH 1001 ESQUINA VERDI</direccion_destino>
+    <telefono_destino>338901-60987652</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>23</id_estudiante>
+    <estudiante>AGUIRRE MOLINA ROBERTO HERNAN</estudiante>
+    <id_contacto_origen>26</id_contacto_origen>
+    <direccion_origen>LOS CARRERA 925 LOS FUNDADORES</direccion_origen>
+    <telefono_origen>255050-87577981</telefono_origen>
+    <hora_origen>7:30</hora_origen>
+    <id_establecimiento>3</id_establecimiento>
+    <nombre_establecimiento>ESCUELA GARCIA H. DE MENDOZA</nombre_establecimiento>
+    <direccion_destino>ALSACIA 900 NEMECIO ANTUNEZ</direccion_destino>
+    <telefono_destino>.-987765572</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>24</id_estudiante>
+    <estudiante>CONTRERAS DUHALDE ROMINA ANDREA</estudiante>
+    <id_contacto_origen>27</id_contacto_origen>
+    <direccion_origen>LOS MOLLES 864 POBL. AGUIRRE CERDA</direccion_origen>
+    <telefono_origen>289094-78865123</telefono_origen>
+    <hora_origen>7:00</hora_origen>
+    <id_establecimiento>1</id_establecimiento>
+    <nombre_establecimiento>COLEGIO SAN JOSE</nombre_establecimiento>
+    <direccion_destino>SAN JUAN BAUSTITSTA 68 SECTOR HOSPITAL</direccion_destino>
+    <telefono_destino>92238910-.</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>25</id_estudiante>
+    <estudiante>GARMENDIA PINTO JOSEFINA IRMA</estudiante>
+    <id_contacto_origen>28</id_contacto_origen>
+    <direccion_origen>MICHOACAN 1900 VILLA MEXICO</direccion_origen>
+    <telefono_origen>89567814-230990</telefono_origen>
+    <hora_origen>7:00</hora_origen>
+    <id_establecimiento>1</id_establecimiento>
+    <nombre_establecimiento>COLEGIO SAN JOSE</nombre_establecimiento>
+    <direccion_destino>SAN JUAN BAUSTITSTA 68 SECTOR HOSPITAL</direccion_destino>
+    <telefono_destino>92238910-.</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>26</id_estudiante>
+    <estudiante>PAREDES SOTO JUAN ANDRES</estudiante>
+    <id_contacto_origen>29</id_contacto_origen>
+    <direccion_origen>MICHIMALONCO 10 LOS ABORIGENES</direccion_origen>
+    <telefono_origen>8956776-238990</telefono_origen>
+    <hora_origen>7:30</hora_origen>
+    <id_establecimiento>3</id_establecimiento>
+    <nombre_establecimiento>ESCUELA GARCIA H. DE MENDOZA</nombre_establecimiento>
+    <direccion_destino>ALSACIA 900 NEMECIO ANTUNEZ</direccion_destino>
+    <telefono_destino>.-987765572</telefono_destino>
+  </Ruta>
+  <Ruta>
+    <id_ruta>3</id_ruta>
+    <nombre_ruta>RUTA RAHUE BAJO - MA&#xD1;ANA</nombre_ruta>
+    <obs_ruta>SAN JOSE-EMPRENDER-ITALIA</obs_ruta>
+    <id_estudiante>27</id_estudiante>
+    <estudiante>GOMEZ TORRIJO FELIPE JUAN</estudiante>
+    <id_contacto_origen>30</id_contacto_origen>
+    <direccion_origen>DUBLE ALMEYDA 250 VILLA EL ESFUERZO</direccion_origen>
+    <telefono_origen>230992-89811914</telefono_origen>
+    <hora_origen>7:30</hora_origen>
+    <id_establecimiento>3</id_establecimiento>
+    <nombre_establecimiento>ESCUELA GARCIA H. DE MENDOZA</nombre_establecimiento>
+    <direccion_destino>ALSACIA 900 NEMECIO ANTUNEZ</direccion_destino>
+    <telefono_destino>.-987765572</telefono_destino>
+  </Ruta>
+</Rutas>

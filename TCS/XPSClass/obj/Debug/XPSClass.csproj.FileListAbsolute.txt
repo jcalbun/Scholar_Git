@@ -1,0 +1,5 @@
+C:\CodeMangusta\TCS\XPSClass\bin\Debug\XPSClass.dll
+C:\CodeMangusta\TCS\XPSClass\bin\Debug\XPSClass.pdb
+C:\CodeMangusta\TCS\XPSClass\obj\Debug\XPSClass.dll
+C:\CodeMangusta\TCS\XPSClass\obj\Debug\XPSClass.pdb
+C:\CodeMangusta\TCS\XPSClass\obj\Debug\XPSClass.csprojResolveAssemblyReference.cache

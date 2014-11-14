@@ -1,0 +1,930 @@
+﻿<FlowDocument PageWidth="816" PageHeight="1056" PagePadding="20,20,10,96" AllowDrop="True" NumberSubstitution.CultureSource="User" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Center" FontFamily="Calibri" FontWeight="Bold" FontSize="14.6666666666667">
+    <Span xml:lang="es-cl">
+      <Span.TextDecorations>
+        <TextDecoration Location="Underline" />
+      </Span.TextDecorations>RUTA DE TRANSPORTES ESCOLAR</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Calibri" FontSize="14.6666666666667">
+    <Span FontWeight="Bold" xml:lang="es-cl">RUTA:</Span>
+    <Span xml:lang="es-cl">[NOMBRE_RUTA]</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Calibri" FontSize="14.6666666666667">
+    <Span FontWeight="Bold" xml:lang="es-cl">FECHA:</Span>
+    <Span xml:lang="es-cl">[FECHA_ACTUAL]</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Calibri" FontSize="14.6666666666667">
+    <Span FontWeight="Bold" xml:lang="es-cl">TRANSPORTISTA:</Span>
+    <Span xml:lang="es-cl">[NOMBRE_TRANSPORTISTA]</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Calibri" FontSize="14.6666666666667">
+    <Span FontWeight="Bold" xml:lang="es-cl" xml:space="preserve">AYUDANTE: </Span>
+    <Span xml:lang="es-cl">[NOMBRE_AYUDANTE]</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Calibri" FontSize="14.6666666666667">
+    <Span FontWeight="Bold" xml:lang="es-cl">VEHICULO</Span>
+    <Span xml:lang="es-cl">: [NOMBRE_VEHICULO]</Span>
+  </Paragraph>
+  <Table CellSpacing="0" Margin="0,0,0,0">
+    <Table.Columns>
+      <TableColumn Width="158.4" />
+      <TableColumn Width="141.8" />
+      <TableColumn Width="75.6" />
+      <TableColumn Width="56.67" />
+      <TableColumn Width="122.87" />
+      <TableColumn Width="141.73" />
+      <TableColumn Width="75.6" />
+    </Table.Columns>
+    <TableRowGroup>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">ESTUDIANTE</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">DIRECCION</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">TELEFONO</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">HORA</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">ESTABLECIMIENTO</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">DIRECCION</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontWeight="Bold" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">TELEFONO</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_1]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_1]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_2]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_2]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_3]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_3]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_4]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_4]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_5]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_5]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_6]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_6]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_7]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_7]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_8]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_8]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_9]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_9]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_10]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_10]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_11]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_11]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_12]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_12]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_13]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_13]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_14]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_14]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_15]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_15]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_16]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_16]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_17]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_17]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_18]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_18]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_19]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_19]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_20]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_20]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_21]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_21]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_22]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_22]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[NOMBRE_ESTUDIANTE_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_ORIGEN_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FONO_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[HR_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[ESTAB_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[DIRECCION_DESTINO_23]</Span>
+          </Paragraph>
+        </TableCell>
+        <TableCell Padding="7.2,0,7.2,0" BorderThickness="1,1,1,1" BorderBrush="#FF000000">
+          <Paragraph Margin="0,0,0,0" TextAlignment="Left" FontFamily="Calibri" FontSize="13.3333333333333">
+            <Span xml:lang="es-cl">[FOND_23]</Span>
+          </Paragraph>
+        </TableCell>
+      </TableRow>
+    </TableRowGroup>
+  </Table>
+  <Paragraph LineHeight="1.15" />
+</FlowDocument>

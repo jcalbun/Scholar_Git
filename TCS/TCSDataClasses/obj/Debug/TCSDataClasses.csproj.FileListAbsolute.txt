@@ -1,0 +1,12 @@
+C:\Proyectos\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.dll.config
+C:\Proyectos\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.dll
+C:\Proyectos\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.pdb
+C:\Proyectos\TCS\TCSDataClasses\obj\Debug\ResolveAssemblyReference.cache
+C:\Proyectos\TCS\TCSDataClasses\obj\Debug\TCSDataClasses.dll
+C:\Proyectos\TCS\TCSDataClasses\obj\Debug\TCSDataClasses.pdb
+C:\CodeMangusta\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.dll.config
+C:\CodeMangusta\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.dll
+C:\CodeMangusta\TCS\TCSDataClasses\bin\Debug\TCSDataClasses.pdb
+C:\CodeMangusta\TCS\TCSDataClasses\obj\Debug\TCSDataClasses.dll
+C:\CodeMangusta\TCS\TCSDataClasses\obj\Debug\TCSDataClasses.pdb
+C:\CodeMangusta\TCS\TCSDataClasses\obj\Debug\TCSDataClasses.csprojResolveAssemblyReference.cache

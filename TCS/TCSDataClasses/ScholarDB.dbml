@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ScholarTransport" Class="ScholarDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ltjavier;Initial Catalog=ScholarTransport;Integrated Security=True" SettingsObjectName="TCSDataClasses.Properties.Settings" SettingsPropertyName="ScholarTransportConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.apoderado" Member="apoderados">
+    <Type Name="apoderado">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="tiene_contrato" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="id_tipo_parentezco" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="apoderado_apoderado_estudiante" Member="apoderado_estudiantes" ThisKey="id" OtherKey="id_apoderado" Type="apoderado_estudiante" />
+      <Association Name="apoderado_contacto_apoderado" Member="contacto_apoderados" ThisKey="id" OtherKey="id_apoderado" Type="contacto_apoderado" />
+      <Association Name="apoderado_trayecto_estudiante" Member="trayecto_estudiantes" ThisKey="id" OtherKey="id_apoderado" Type="trayecto_estudiante" />
+      <Association Name="apoderado_contrato" Member="contratos" ThisKey="id" OtherKey="id_apoderado" Type="contrato" />
+      <Association Name="apoderado_pago" Member="pagos" ThisKey="id" OtherKey="id_apoderado" Type="pago" />
+      <Association Name="tipo_parentezco_apoderado" Member="tipo_parentezco" ThisKey="id_tipo_parentezco" OtherKey="id" Type="tipo_parentezco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.apoderado_estudiante" Member="apoderado_estudiantes">
+    <Type Name="apoderado_estudiante">
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="apoderado_apoderado_estudiante" Member="apoderado" ThisKey="id_apoderado" OtherKey="id" Type="apoderado" IsForeignKey="true" />
+      <Association Name="estudiante_apoderado_estudiante" Member="estudiante" ThisKey="id_estudiante" OtherKey="id" Type="estudiante" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ayudante" Member="ayudantes">
+    <Type Name="ayudante">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Association Name="ayudante_contacto_ayudante" Member="contacto_ayudantes" ThisKey="id" OtherKey="id_ayudante" Type="contacto_ayudante" />
+      <Association Name="ayudante_trayecto_ayudante" Member="trayecto_ayudantes" ThisKey="id" OtherKey="id_ayudante" Type="trayecto_ayudante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.conductor" Member="conductors">
+    <Type Name="conductor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Association Name="conductor_trayecto_conductor" Member="trayecto_conductors" ThisKey="id" OtherKey="id_conductor" Type="trayecto_conductor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contacto_apoderado" Member="contacto_apoderados">
+    <Type Name="contacto_apoderado">
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fechar_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="apoderado_contacto_apoderado" Member="apoderado" ThisKey="id_apoderado" OtherKey="id" Type="apoderado" IsForeignKey="true" />
+      <Association Name="contacto_contacto_apoderado" Member="contacto" ThisKey="id_contacto" OtherKey="id" Type="contacto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contacto_ayudante" Member="contacto_ayudantes">
+    <Type Name="contacto_ayudante">
+      <Column Name="id_ayudante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Association Name="ayudante_contacto_ayudante" Member="ayudante" ThisKey="id_ayudante" OtherKey="id" Type="ayudante" IsForeignKey="true" />
+      <Association Name="contacto_contacto_ayudante" Member="contacto" ThisKey="id_contacto" OtherKey="id" Type="contacto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contacto_establecimiento" Member="contacto_establecimientos">
+    <Type Name="contacto_establecimiento">
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="establecimiento_contacto_establecimiento" Member="establecimiento" ThisKey="id_establecimiento" OtherKey="id" Type="establecimiento" IsForeignKey="true" />
+      <Association Name="contacto_contacto_establecimiento" Member="contacto" ThisKey="id_contacto" OtherKey="id" Type="contacto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.egreso" Member="egresos">
+    <Type Name="egreso">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_tipo_egreso" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ano_egreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes_egreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_egreso_egreso" Member="tipo_egreso" ThisKey="id_tipo_egreso" OtherKey="id" Type="tipo_egreso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.establecimiento" Member="establecimientos">
+    <Type Name="establecimiento">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipo_establecimiento" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="establecimiento_contacto_establecimiento" Member="contacto_establecimientos" ThisKey="id" OtherKey="id_establecimiento" Type="contacto_establecimiento" />
+      <Association Name="establecimiento_establecimiento_estudiante" Member="establecimiento_estudiantes" ThisKey="id" OtherKey="id_establecimiento" Type="establecimiento_estudiante" />
+      <Association Name="establecimiento_trayecto_estudiante" Member="trayecto_estudiantes" ThisKey="id" OtherKey="id_establecimiento" Type="trayecto_estudiante" />
+      <Association Name="tipo_establecimiento_establecimiento" Member="tipo_establecimiento1" ThisKey="tipo_establecimiento" OtherKey="id" Type="tipo_establecimiento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.establecimiento_estudiante" Member="establecimiento_estudiantes">
+    <Type Name="establecimiento_estudiante">
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="establecimiento_establecimiento_estudiante" Member="establecimiento" ThisKey="id_establecimiento" OtherKey="id" Type="establecimiento" IsForeignKey="true" />
+      <Association Name="estudiante_establecimiento_estudiante" Member="estudiante" ThisKey="id_estudiante" OtherKey="id" Type="estudiante" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fecha_pago_servicio" Member="fecha_pago_servicios">
+    <Type Name="fecha_pago_servicio">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="fecha_pago_servicio_contrato" Member="contratos" ThisKey="id" OtherKey="id_fecha_pago_contrato" Type="contrato" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ingreso" Member="ingresos">
+    <Type Name="ingreso">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_tipo_ingreso" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ano_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_ingreso_ingreso" Member="tipo_ingreso" ThisKey="id_tipo_ingreso" OtherKey="id" Type="tipo_ingreso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.minibus" Member="minibus">
+    <Type Name="minibus">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numero_patente" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="modelo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipo_combustible" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="kilometraje" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ano_inicio_actividad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="minibus_trayecto_minibus" Member="trayecto_minibus" ThisKey="id" OtherKey="id_minibus" Type="trayecto_minibus" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_egreso" Member="tipo_egresos">
+    <Type Name="tipo_egreso">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_egreso_egreso" Member="egresos" ThisKey="id" OtherKey="id_tipo_egreso" Type="egreso" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_establecimiento" Member="tipo_establecimientos">
+    <Type Name="tipo_establecimiento">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_establecimiento_establecimiento" Member="establecimientos" ThisKey="id" OtherKey="tipo_establecimiento" Type="establecimiento" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_ingreso" Member="tipo_ingresos">
+    <Type Name="tipo_ingreso">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_ingreso_ingreso" Member="ingresos" ThisKey="id" OtherKey="id_tipo_ingreso" Type="ingreso" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_jornada" Member="tipo_jornadas">
+    <Type Name="tipo_jornada">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_jornada_trayecto_estudiante" Member="trayecto_estudiantes" ThisKey="id" OtherKey="id_tipo_jornada" Type="trayecto_estudiante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_parentezco" Member="tipo_parentezcos">
+    <Type Name="tipo_parentezco">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_parentezco_apoderado" Member="apoderados" ThisKey="id" OtherKey="id_tipo_parentezco" Type="apoderado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipo_trayecto" Member="tipo_trayectos">
+    <Type Name="tipo_trayecto">
+      <Column Name="id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tipo_trayecto_trayecto" Member="trayectos" ThisKey="id" OtherKey="id_tipo_trayecto" Type="trayecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trayecto_ayudante" Member="trayecto_ayudantes">
+    <Type Name="trayecto_ayudante">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_ayudante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ayudante_trayecto_ayudante" Member="ayudante" ThisKey="id_ayudante" OtherKey="id" Type="ayudante" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trayecto_conductor" Member="trayecto_conductors">
+    <Type Name="trayecto_conductor">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_conductor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="conductor_trayecto_conductor" Member="conductor" ThisKey="id_conductor" OtherKey="id" Type="conductor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trayecto_estudiante" Member="trayecto_estudiantes">
+    <Type Name="trayecto_estudiante">
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_tipo_jornada" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="apoderado_trayecto_estudiante" Member="apoderado" ThisKey="id_apoderado" OtherKey="id" Type="apoderado" IsForeignKey="true" />
+      <Association Name="establecimiento_trayecto_estudiante" Member="establecimiento" ThisKey="id_establecimiento" OtherKey="id" Type="establecimiento" IsForeignKey="true" />
+      <Association Name="tipo_jornada_trayecto_estudiante" Member="tipo_jornada" ThisKey="id_tipo_jornada" OtherKey="id" Type="tipo_jornada" IsForeignKey="true" />
+      <Association Name="estudiante_trayecto_estudiante" Member="estudiante" ThisKey="id_estudiante" OtherKey="id" Type="estudiante" IsForeignKey="true" />
+      <Association Name="trayecto_trayecto_estudiante" Member="trayecto" ThisKey="id_trayecto" OtherKey="id" Type="trayecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trayecto_minibus" Member="trayecto_minibus">
+    <Type Name="trayecto_minibus">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_minibus" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="minibus_trayecto_minibus" Member="minibus" ThisKey="id_minibus" OtherKey="id" Type="minibus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.option_application" Member="option_applications">
+    <Type Name="option_application">
+      <Column Name="menuOptionId" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="levelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageUrl" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="menuMasterOptionId" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contacto" Member="contactos">
+    <Type Name="contacto">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="comentarios" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="contacto_contacto_apoderado" Member="contacto_apoderados" ThisKey="id" OtherKey="id_contacto" Type="contacto_apoderado" />
+      <Association Name="contacto_contacto_ayudante" Member="contacto_ayudantes" ThisKey="id" OtherKey="id_contacto" Type="contacto_ayudante" />
+      <Association Name="contacto_contacto_establecimiento" Member="contacto_establecimientos" ThisKey="id" OtherKey="id_contacto" Type="contacto_establecimiento" />
+      <Association Name="contacto_trayecto" Member="trayectos" ThisKey="id" OtherKey="id_contacto_origen" Type="trayecto" />
+      <Association Name="contacto_trayecto1" Member="trayectos1" ThisKey="id" OtherKey="id_contacto_destino" Type="trayecto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.estudiante" Member="estudiantes">
+    <Type Name="estudiante">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="estudiante_apoderado_estudiante" Member="apoderado_estudiantes" ThisKey="id" OtherKey="id_estudiante" Type="apoderado_estudiante" />
+      <Association Name="estudiante_establecimiento_estudiante" Member="establecimiento_estudiantes" ThisKey="id" OtherKey="id_estudiante" Type="establecimiento_estudiante" />
+      <Association Name="estudiante_trayecto_estudiante" Member="trayecto_estudiantes" ThisKey="id" OtherKey="id_estudiante" Type="trayecto_estudiante" />
+      <Association Name="estudiante_contrato" Member="contratos" ThisKey="id" OtherKey="id_estudiante" Type="contrato" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ruta" Member="rutas">
+    <Type Name="ruta">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trayecto" Member="trayectos">
+    <Type Name="trayecto">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_contacto_origen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_contacto_destino" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipo_trayecto" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="dias_semana" Type="System.String" DbType="Char(7) NOT NULL" CanBeNull="false" />
+      <Column Name="hora_origen" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="hora_destino" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fechar_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="trayecto_trayecto_estudiante" Member="trayecto_estudiantes" ThisKey="id" OtherKey="id_trayecto" Type="trayecto_estudiante" />
+      <Association Name="contacto_trayecto" Member="contacto" ThisKey="id_contacto_origen" OtherKey="id" Type="contacto" IsForeignKey="true" />
+      <Association Name="contacto_trayecto1" Member="contacto1" ThisKey="id_contacto_destino" OtherKey="id" Type="contacto" IsForeignKey="true" />
+      <Association Name="tipo_trayecto_trayecto" Member="tipo_trayecto" ThisKey="id_tipo_trayecto" OtherKey="id" Type="tipo_trayecto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ruta_trayecto" Member="ruta_trayectos">
+    <Type Name="ruta_trayecto">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contrato" Member="contratos">
+    <Type Name="contrato">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ano" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="monto_contrato" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_fecha_pago_contrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="contrato_pago" Member="pagos" ThisKey="id" OtherKey="id_contrato" Type="pago" />
+      <Association Name="apoderado_contrato" Member="apoderado" ThisKey="id_apoderado" OtherKey="id" Type="apoderado" IsForeignKey="true" />
+      <Association Name="estudiante_contrato" Member="estudiante" ThisKey="id_estudiante" OtherKey="id" Type="estudiante" IsForeignKey="true" />
+      <Association Name="fecha_pago_servicio_contrato" Member="fecha_pago_servicio" ThisKey="id_fecha_pago_contrato" OtherKey="id" Type="fecha_pago_servicio" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pagos" Member="pagos">
+    <Type Name="pago">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_contrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_pago" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ano_cuota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes_cuota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="apoderado_pago" Member="apoderado" ThisKey="id_apoderado" OtherKey="id" Type="apoderado" IsForeignKey="true" />
+      <Association Name="contrato_pago" Member="contrato" ThisKey="id_contrato" OtherKey="id" Type="contrato" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.get_usuarios" Method="get_usuarios">
+    <Parameter Name="codigo_usuario" Type="System.String" DbType="Char(15)" />
+    <Parameter Name="nombre" Type="System.String" DbType="Char(40)" />
+    <ElementType Name="get_usuariosResult">
+      <Column Name="codigo_usuario" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="codigo_perfil" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="caduca" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_validez" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_opciones" Method="get_opciones">
+    <Parameter Name="codigo_opcion" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="nombre_opcion" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="get_opcionesResult">
+      <Column Name="codigo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_apoderado" Method="get_contactos_apoderado">
+    <Parameter Name="apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contactos_apoderadoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombres_ap" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos_ap" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_completo_ap" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="comentarios" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_estudiantes" Method="get_contactos_estudiantes">
+    <Parameter Name="id_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="rut_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellido_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contactos_estudiantesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_establecimientos" Method="get_establecimientos">
+    <Parameter Name="id_establecimiento" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_establecimientosResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_tipo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_conductores" Method="get_conductores">
+    <Parameter Name="id" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="rut" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombres" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellidos" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_conductoresResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ayudantes" Method="get_ayudantes">
+    <Parameter Name="id" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="rut" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombres" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellidos" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_ayudantesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_minibuses" Method="get_minibuses">
+    <Parameter Name="id" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="numero_patente" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="marca" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="modelo" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="ano" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_minibusesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numero_patente" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ano_inicio_actividad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kilometraje" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="modelo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tipo_combustible" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_rutas" Method="get_rutas">
+    <Parameter Name="id_ruta" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="nombre_ruta" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="id_estudiante" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="nombre_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_rutasResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="id_contacto_origen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trayecto" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ruta_conductores" Method="get_ruta_conductores">
+    <Parameter Name="id_ruta" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="id_conductor" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="id_trayecto" Type="System.String" DbType="Char(50)" />
+    <ElementType Name="get_ruta_conductoresResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_ruta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_conductor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="conductor" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trayecto" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ruta_minibuses" Method="get_ruta_minibuses">
+    <Parameter Name="id_ruta" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="id_minibus" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="id_trayecto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="conductor" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_ruta_minibusesResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_ruta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_minibus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="minibus" Type="System.String" DbType="VarChar(152)" CanBeNull="true" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trayecto" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ruta_ayudantes" Method="get_ruta_ayudantes">
+    <Parameter Name="ruta" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="trayecto" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="ayudante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_ruta_ayudantesResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_ruta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_ayudante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ayudante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trayecto" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_apoderado_estudiantes" Method="get_apoderado_estudiantes">
+    <Parameter Name="apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_apoderado_estudiantesResult">
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="apoderado" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_establecimiento" Method="get_contactos_establecimiento">
+    <Parameter Name="establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contactos_establecimientoResult">
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_conductor" Method="get_contactos_conductor">
+    <Parameter Name="conductor" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contactos_conductorResult">
+      <Column Name="id_conductor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="conductor" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_ayudante" Method="get_contactos_ayudante">
+    <Parameter Name="ayudante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="direccion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="telefono" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contactos_ayudanteResult">
+      <Column Name="id_ayudante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ayudante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_contacto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contratos" Method="get_contratos">
+    <Parameter Name="contrato" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="ano_contrato" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_pago" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contratosResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="apoderado" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_fecha_pago_contrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_pago_contrato" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="monto_contrato" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_pagos" Method="get_pagos">
+    <Parameter Name="pago" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contrato" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="documento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_desde" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_hasta" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_pagosResult">
+      <Column Name="id_pago" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_contrato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apoderado" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_contrato1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ano_cuota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes_cuota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tipo_pago" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ingresos" Method="get_ingresos">
+    <Parameter Name="ingreso" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="documento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="tipo_ingreso" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_desde" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_hasta" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_ingresosResult">
+      <Column Name="id_ingreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mes_ingreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipo_ingreso" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_ingreso" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_egresos" Method="get_egresos">
+    <Parameter Name="egreso" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="documento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="tipo_ingreso" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_desde" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_hasta" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_egresosResult">
+      <Column Name="id_egreso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numero_documento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano_egreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mes_egreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="monto" Type="System.Decimal" DbType="Decimal(12,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipo_egreso" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_egreso" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_insert_apoderado" Method="sp_insert_apoderado">
+    <Parameter Name="rut" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nombres" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellidos" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="tiene_contrato" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="id_tipo_parentezco" Type="System.Char" DbType="Char(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.get_contactos_estudiante" Method="get_contactos_estudiante">
+    <Parameter Name="id_estudiante" Type="System.Int32" DbType="Int" />
+    <ElementType Name="get_contactos_estudianteResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="comentarios" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contactos_establecimiento_estudiante" Method="get_contactos_establecimiento_estudiante">
+    <Parameter Name="id_estudiante" Type="System.Int32" DbType="Int" />
+    <ElementType Name="get_contactos_establecimiento_estudianteResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="comentarios" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usuario_cr" Type="System.String" DbType="Char(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_cr" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_up" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_up" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_establecimiento_estudiantes" Method="get_establecimiento_estudiantes">
+    <Parameter Name="establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_establecimiento_estudiantesResult">
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="estudiante1" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="rut_estudiante" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_trayectos" Method="get_trayectos">
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="id" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="origen" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="destino" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="id_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_trayectosResult">
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_contacto_origen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="origen" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_contacto_destino" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="destino" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="hora_origen" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="hora_destino" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="id_tipo_trayecto" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tipo_trayecto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="dias_semana" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_rutas_gen" Method="get_rutas_gen">
+    <Parameter Name="id_ruta" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="nombre_ruta" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_rutas_genResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_ruta_estudiantes" Method="get_ruta_estudiantes">
+    <Parameter Name="ruta" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="trayecto" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_ruta_estudiantesResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_trayecto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="id_contacto_origen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="trayecto" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="id_tipo_trayecto" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_tipo_trayecto" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_estudiantes" Method="get_estudiantes">
+    <Parameter Name="id_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="rut_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellido_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="id_apoderado" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_estudiantesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rut" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="fotografia" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_apoderados" Method="get_apoderados">
+    <Parameter Name="id_apoderado" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="rut_apoderado" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nombres_apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apellidos_apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="contacto" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_apoderadosResult">
+      <Column Name="id_ap" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="rut_ap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nombres_ap" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="apellidos_ap" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipo_parentezco" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="tiene_contrato" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fotografia" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(513)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(513)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_establecimiento_estudiantes_2" Method="get_establecimiento_estudiantes_2">
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_establecimiento_estudiantes_2Result">
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="establecimiento" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="direccion_1" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rut_estudiante" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itinerario" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contratos2" Method="get_contratos2">
+    <Parameter Name="contrato" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="apoderado" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="estudiante" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="ano_contrato" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="fecha_pago" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contratos2Result">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rut_estudiante" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="rut_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_fecha_pago_contrato" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_pago_contrato" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="monto_contrato" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="direccion_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="itinerario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GET_RPT_RUTAS_TRANSPORTE" Method="GET_RPT_RUTAS_TRANSPORTE">
+    <Parameter Name="ID_RUTA" Parameter="iD_RUTA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GET_RPT_RUTAS_TRANSPORTEResult">
+      <Column Name="id_ruta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_ruta" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="obs_ruta" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTUDIANTE" Type="System.String" DbType="VarChar(511) NOT NULL" CanBeNull="false" />
+      <Column Name="id_contacto_origen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DIRECCION_ORIGEN" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="TELEFONO_ORIGEN" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="hora_origen" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ID_ESTABLECIMIENTO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DIRECCION_DESTINO" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+      <Column Name="TELEFONO_DESTINO" Type="System.String" DbType="VarChar(511)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_contratos3" Method="get_contratos3">
+    <Parameter Name="contrato" Type="System.String" DbType="VarChar(255)" />
+    <ElementType Name="get_contratos3Result">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_estudiante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rut_estudiante" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="rut_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="estudiante" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_fecha_pago_contrato" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha_pago_contrato" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="fecha_inicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fecha_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="monto_contrato" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="observaciones" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="direccion_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telefono_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="id_establecimiento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_establecimiento" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="itinerario" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_informe_pagos" Method="get_informe_pagos">
+    <ElementType Name="get_informe_pagosResult">
+      <Column Name="id_contrato" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_apoderado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_apoderado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre_mes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="monto_contrato" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="monto_pagado" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

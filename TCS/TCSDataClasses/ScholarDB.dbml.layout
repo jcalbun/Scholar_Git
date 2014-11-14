@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.75, 31.125" name="ScholarDB">
+  <DataContextMoniker Name="/ScholarDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f6212429-3011-4883-96d9-33a7dcb36f65" absoluteBounds="3.5, 7.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/ScholarDBDataContext/apoderado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cd6998b-b906-4169-888f-ac4d0fbaeb90" absoluteBounds="3.5150000000000006, 8.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10915206-8644-49e0-be6b-d56b6a767d58" absoluteBounds="6.25, 4.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/apoderado_estudiante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e14a5a34-3dd7-4aef-b281-9f2e8bbf20f1" absoluteBounds="6.2650000000000006, 4.8350000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.59375 : 7.875); (3.59375 : 6.31655110677083); (6.25 : 6.31655110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/apoderado/apoderado_apoderado_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+        <classShapeMoniker Id="10915206-8644-49e0-be6b-d56b6a767d58" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="faefbe84-9724-4f8f-a5d9-c3c1ff7c644e" absoluteBounds="9.25, 23.875, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/ScholarDBDataContext/ayudante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1a200b3-73eb-4580-bafe-c6291db062a5" absoluteBounds="9.265, 24.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf60376a-7f9d-4721-820d-01b4d67151dd" absoluteBounds="9.25, 12.875, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/ScholarDBDataContext/conductor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61e6b0c8-d7d8-450f-8318-c3333e3168be" absoluteBounds="9.265, 13.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="734e8d36-4189-4089-9fb3-83136fa1f74b" absoluteBounds="6.25, 12.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/contacto_apoderado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c7e1c3c-5972-4932-8abc-d3ab80b207a7" absoluteBounds="6.2650000000000006, 12.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b336a38-b4bb-4370-a638-63adafc84e87" absoluteBounds="6.5, 23.875, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/contacto_ayudante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="457f71fa-8890-436c-ae5f-a181b2bc4a2d" absoluteBounds="6.5150000000000006, 24.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="873c5334-9052-484f-bb7f-a43f75e46360" absoluteBounds="9.25, 16.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/contacto_establecimiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de28eb8e-f11b-43d6-9bcd-422b50f9fcd0" absoluteBounds="9.265, 16.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf9b989b-2d7e-40f4-b20f-7496e3164c30" absoluteBounds="17.5, 7.625, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/ScholarDBDataContext/egreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b56c190-2969-4cd3-9368-cbc87208220a" absoluteBounds="17.515, 8.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5443728f-fc87-4777-a7e6-c41c9e801275" absoluteBounds="6.5, 15.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ScholarDBDataContext/establecimiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d079416a-b55d-4398-91f8-071841582e16" absoluteBounds="6.515, 15.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd965fc8-7e45-4eb5-9425-118643071b04" absoluteBounds="12.25, 12.875, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/establecimiento_estudiante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24e2afc9-44dc-4c38-9a6a-d374dd0c4925" absoluteBounds="12.265, 13.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="855d3fe8-531a-482a-8461-cc9d2cf75c30" absoluteBounds="3.5, 12.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/fecha_pago_servicio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c92034c7-c10c-4d73-91c5-bfae57eea363" absoluteBounds="3.5149999999999997, 12.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d9a04a7-c243-4671-9285-ce81e5c4ba8b" absoluteBounds="12.5, 2.625, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/ScholarDBDataContext/ingreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1177cabd-7e8c-432d-99a2-1fc281247eb6" absoluteBounds="12.515, 3.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28153224-1aa7-4458-90f8-d45dfab6dc00" absoluteBounds="9.25, 27.375, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/ScholarDBDataContext/minibus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="792c8d51-121b-433c-b235-080e319d47e6" absoluteBounds="9.265, 27.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3dc02508-8b7f-495f-92e9-54ccdd57bcfe" absoluteBounds="14.75, 8.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_egreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77eb9399-9368-4a96-bcd8-65b95a1a516d" absoluteBounds="14.765, 8.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea7f4aea-4983-45d4-b5c8-25eaa11fd7f5" absoluteBounds="3.75, 15.5, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_establecimiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5692b07d-ab25-48b2-9eb5-9efb1e9cdf2b" absoluteBounds="3.7649999999999997, 15.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17f5a161-6919-453f-821d-d44e45d0aafd" absoluteBounds="9.75, 3.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_ingreso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dc665b7-613b-4337-9dc6-d4d1d965faa4" absoluteBounds="9.765, 3.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89c34dff-9550-4b3e-b121-ea8a671d065b" absoluteBounds="6.5, 0.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_jornada" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20961dc0-a153-4819-925f-ad3eeeec375d" absoluteBounds="6.5150000000000006, 1.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70c7792a-1496-4f41-b9a2-a1a67c89204b" absoluteBounds="0.75, 8.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_parentezco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f4eab55-8817-419e-b5b8-40955609fef2" absoluteBounds="0.76499999999999968, 8.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f93deefa-7693-4189-ba85-a538e8460539" absoluteBounds="3.75, 22, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/ScholarDBDataContext/tipo_trayecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f91acbc5-8d22-4766-bb73-739a1bcf8d6c" absoluteBounds="3.7650000000000006, 22.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad42a400-d258-429f-9166-a071d35d04c8" absoluteBounds="12, 20.125, 2, 2.1554996744791737">
+      <DataClassMoniker Name="/ScholarDBDataContext/trayecto_ayudante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ea1e080-bf17-4e0e-9328-3eddc23a7c60" absoluteBounds="12.015, 20.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a709c40-b9b3-48ba-820a-9889639b3c34" absoluteBounds="12, 17.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ScholarDBDataContext/trayecto_conductor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0df95f68-085d-4c89-9805-e23b49d45720" absoluteBounds="12.015, 17.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b921502-6c1b-4446-b778-b9cb37bc804a" absoluteBounds="9.25, 7.875, 2, 2.9247054036458344">
+      <DataClassMoniker Name="/ScholarDBDataContext/trayecto_estudiante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9939dc97-1383-4de2-a309-6334081789fa" absoluteBounds="9.265, 8.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4e090a9-9aef-49cb-b8a6-c94985498f46" absoluteBounds="12, 23.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ScholarDBDataContext/trayecto_minibus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="506710e7-a856-4c53-8e32-3f6647a85d23" absoluteBounds="12.015, 23.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.7997054036458); (5.875 : 11.1747054036458); (5.875 : 13.3565991210938); (6.25 : 13.3565991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/apoderado/apoderado_contacto_apoderado" />
+      <nodes>
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+        <classShapeMoniker Id="734e8d36-4189-4089-9fb3-83136fa1f74b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 24.8565991210938); (8.5 : 24.8565991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/ayudante/ayudante_contacto_ayudante" />
+      <nodes>
+        <classShapeMoniker Id="faefbe84-9724-4f8f-a5d9-c3c1ff7c644e" />
+        <classShapeMoniker Id="4b336a38-b4bb-4370-a638-63adafc84e87" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 17.0152498372396); (8.91666666666667 : 17.0152498372396 : JumpStart); (9.08333333333333 : 17.0152498372396 : JumpEnd); (9.25 : 17.0152498372396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/establecimiento/establecimiento_contacto_establecimiento" />
+      <nodes>
+        <classShapeMoniker Id="5443728f-fc87-4777-a7e6-c41c9e801275" />
+        <classShapeMoniker Id="873c5334-9052-484f-bb7f-a43f75e46360" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 15.9062505); (8.91666666666667 : 15.9062505 : JumpStart); (9.08333333333333 : 15.9062505 : JumpEnd); (14.15625 : 15.9062505); (14.15625 : 14.8381982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/establecimiento/establecimiento_establecimiento_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="5443728f-fc87-4777-a7e6-c41c9e801275" />
+        <classShapeMoniker Id="cd965fc8-7e45-4eb5-9425-118643071b04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.75 : 9.23159912109375); (17.5 : 9.23159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_egreso/tipo_egreso_egreso" />
+      <nodes>
+        <classShapeMoniker Id="3dc02508-8b7f-495f-92e9-54ccdd57bcfe" />
+        <classShapeMoniker Id="cf9b989b-2d7e-40f4-b20f-7496e3164c30" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 16.4815991210938); (6.26041666666667 : 16.4815991210938 : JumpStart); (6.42708333333333 : 16.4815991210938 : JumpEnd); (6.5 : 16.4815991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_establecimiento/tipo_establecimiento_establecimiento" />
+      <nodes>
+        <classShapeMoniker Id="ea7f4aea-4983-45d4-b5c8-25eaa11fd7f5" />
+        <classShapeMoniker Id="5443728f-fc87-4777-a7e6-c41c9e801275" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 4.23159912109375); (12.5 : 4.23159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_ingreso/tipo_ingreso_ingreso" />
+      <nodes>
+        <classShapeMoniker Id="17f5a161-6919-453f-821d-d44e45d0aafd" />
+        <classShapeMoniker Id="9d9a04a7-c243-4671-9285-ce81e5c4ba8b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.35659912109375); (3.5 : 9.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_parentezco/tipo_parentezco_apoderado" />
+      <nodes>
+        <classShapeMoniker Id="70c7792a-1496-4f41-b9a2-a1a67c89204b" />
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.34375 : 23.875); (9.34375 : 21.907900390625); (12 : 21.907900390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/ayudante/ayudante_trayecto_ayudante" />
+      <nodes>
+        <classShapeMoniker Id="faefbe84-9724-4f8f-a5d9-c3c1ff7c644e" />
+        <classShapeMoniker Id="ad42a400-d258-429f-9166-a071d35d04c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 15.157900390625); (12.09375 : 15.157900390625); (12.09375 : 17.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/conductor/conductor_trayecto_conductor" />
+      <nodes>
+        <classShapeMoniker Id="bf60376a-7f9d-4721-820d-01b4d67151dd" />
+        <classShapeMoniker Id="5a709c40-b9b3-48ba-820a-9889639b3c34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.30610070182292); (7.25 : 9.30610070182292); (7.25 : 11.5016097005208); (10.4062495 : 11.5016097005208); (10.4062495 : 10.7997054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/apoderado/apoderado_trayecto_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+        <classShapeMoniker Id="7b921502-6c1b-4446-b778-b9cb37bc804a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 16.8121270872396); (9 : 16.8121270872396); (9 : 11.2997054036458); (9.95312225 : 11.2997054036458); (9.95312225 : 10.7997054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/establecimiento/establecimiento_trayecto_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="5443728f-fc87-4777-a7e6-c41c9e801275" />
+        <classShapeMoniker Id="7b921502-6c1b-4446-b778-b9cb37bc804a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 1.73159912109375); (9.625 : 1.73159912109375); (9.625 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_jornada/tipo_jornada_trayecto_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="89c34dff-9550-4b3e-b121-ea8a671d065b" />
+        <classShapeMoniker Id="7b921502-6c1b-4446-b778-b9cb37bc804a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 29.1258048502604); (13 : 29.1258048502604); (13 : 25.2804996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/minibus/minibus_trayecto_minibus" />
+      <nodes>
+        <classShapeMoniker Id="28153224-1aa7-4458-90f8-d45dfab6dc00" />
+        <classShapeMoniker Id="b4e090a9-9aef-49cb-b8a6-c94985498f46" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="320bf034-7add-4552-817a-3f02b4a300e6" absoluteBounds="1.125, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ScholarDBDataContext/option_application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36f89c22-6c95-4004-92a2-257bb4edb37a" absoluteBounds="1.1400000000000001, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" absoluteBounds="3.25, 18.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/ScholarDBDataContext/contacto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c3e283b-1989-455d-8a6a-db6efaf74acc" absoluteBounds="3.2649999999999997, 18.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 19.03125); (6.34375 : 19.03125); (6.34375 : 14.3381982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contacto/contacto_contacto_apoderado" />
+      <nodes>
+        <classShapeMoniker Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" />
+        <classShapeMoniker Id="734e8d36-4189-4089-9fb3-83136fa1f74b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.46875 : 21.2997054036458); (3.46875 : 24.9319482421875); (6.5 : 24.9319482421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contacto/contacto_contacto_ayudante" />
+      <nodes>
+        <classShapeMoniker Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" />
+        <classShapeMoniker Id="4b336a38-b4bb-4370-a638-63adafc84e87" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.46875 : 18.375); (3.46875 : 18.0280989583333); (6.26041666666667 : 18.0280989583333 : JumpStart); (6.42708333333333 : 18.0280989583333 : JumpEnd); (8.91666666666667 : 18.0280989583333 : JumpStart); (9.08333333333333 : 18.0280989583333 : JumpEnd); (9.25 : 18.0280989583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contacto/contacto_contacto_establecimiento" />
+      <nodes>
+        <classShapeMoniker Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" />
+        <classShapeMoniker Id="873c5334-9052-484f-bb7f-a43f75e46360" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9f6798af-ede4-400a-9e8f-0fbd311c223a" absoluteBounds="3.75, 3.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/ScholarDBDataContext/estudiante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8920c09b-14c9-44dc-9ad8-ad92c428b3a0" absoluteBounds="3.765, 3.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 5.30370198567708); (6.25 : 5.30370198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/estudiante/estudiante_apoderado_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="9f6798af-ede4-400a-9e8f-0fbd311c223a" />
+        <classShapeMoniker Id="10915206-8644-49e0-be6b-d56b6a767d58" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.86620198567708); (6 : 4.86620198567708); (6 : 6.5881982421875); (14.375 : 6.5881982421875); (14.375 : 12.5); (13.25 : 12.5); (13.25 : 12.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/estudiante/estudiante_establecimiento_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="9f6798af-ede4-400a-9e8f-0fbd311c223a" />
+        <classShapeMoniker Id="cd965fc8-7e45-4eb5-9425-118643071b04" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.45712134415064); (5.98166663968843 : 5.48435056170554 : JumpStart); (6.01833336031157 : 5.64693386151373 : JumpEnd); (6.24903946153846 : 6.66990397135417); (10.468752 : 6.66990397135417); (10.468752 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/estudiante/estudiante_trayecto_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="9f6798af-ede4-400a-9e8f-0fbd311c223a" />
+        <classShapeMoniker Id="7b921502-6c1b-4446-b778-b9cb37bc804a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="04ef7633-a382-4ffd-91f2-20495b1467ef" absoluteBounds="0.75, 3.75, 2, 2.347801106770834">
+      <DataClassMoniker Name="/ScholarDBDataContext/ruta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15d05cd3-2f5b-40a6-967f-486b0b0d112a" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52af4bb7-bb9a-4cb3-8336-ebd1f7597977" absoluteBounds="6.875, 19.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/ScholarDBDataContext/trayecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19a31d83-0440-44bd-8397-839baf0ec64b" absoluteBounds="6.89, 20.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.875 : 20.8289506953125); (10.25 : 20.8289506953125); (10.25 : 18.5881982421875); (9 : 18.5881982421875); (9 : 11.1747054036458); (10.3229161666667 : 11.1747054036458 : JumpStart); (10.4895828333333 : 11.1747054036458 : JumpEnd); (10.85937675 : 11.1747054036458); (10.85937675 : 10.7997054036458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/trayecto/trayecto_trayecto_estudiante" />
+      <nodes>
+        <classShapeMoniker Id="52af4bb7-bb9a-4cb3-8336-ebd1f7597977" />
+        <classShapeMoniker Id="7b921502-6c1b-4446-b778-b9cb37bc804a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 20.5248527018229); (6.875 : 20.5248527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contacto/contacto_trayecto" />
+      <nodes>
+        <classShapeMoniker Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" />
+        <classShapeMoniker Id="52af4bb7-bb9a-4cb3-8336-ebd1f7597977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 20.0749263509115); (6.875 : 20.0749263509115)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contacto/contacto_trayecto1" />
+      <nodes>
+        <classShapeMoniker Id="1eecbf84-ece1-4e5f-8118-79712ecf06e6" />
+        <classShapeMoniker Id="52af4bb7-bb9a-4cb3-8336-ebd1f7597977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 22.3373527018229); (6.875 : 22.3373527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/tipo_trayecto/tipo_trayecto_trayecto" />
+      <nodes>
+        <classShapeMoniker Id="f93deefa-7693-4189-ba85-a538e8460539" />
+        <classShapeMoniker Id="52af4bb7-bb9a-4cb3-8336-ebd1f7597977" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cbc8d204-cffa-4862-bbb8-2c93cd9f5592" absoluteBounds="4.125, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ScholarDBDataContext/ruta_trayecto" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae8dbe05-706b-4d0e-a701-9f62269d3fc3" absoluteBounds="4.14, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b6e57ed-d481-496a-aa87-a868145896cc" absoluteBounds="7.5, 7.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ScholarDBDataContext/contrato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="106927d5-3c3c-4134-b0bd-07fb32a0a7fc" absoluteBounds="7.515, 7.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.0841505527344); (7.16666666666667 : 10.0841505527344 : JumpStart); (7.33333333333333 : 10.0841505527344 : JumpEnd); (7.5 : 10.0841505527344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/apoderado/apoderado_contrato" />
+      <nodes>
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+        <classShapeMoniker Id="3b6e57ed-d481-496a-aa87-a868145896cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 6.23240397135417); (5.65625 : 7.65625); (7.5 : 7.65625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/estudiante/estudiante_contrato" />
+      <nodes>
+        <classShapeMoniker Id="9f6798af-ede4-400a-9e8f-0fbd311c223a" />
+        <classShapeMoniker Id="3b6e57ed-d481-496a-aa87-a868145896cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.4369152522536); (5.81607443490112 : 12.1208408173525 : JumpStart); (5.93392556509888 : 12.0029896871547 : JumpEnd); (6.1875 : 11.7494152522536); (6.1875 : 8.51242785091146); (7.5 : 8.51242785091146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/fecha_pago_servicio/fecha_pago_servicio_contrato" />
+      <nodes>
+        <classShapeMoniker Id="855d3fe8-531a-482a-8461-cc9d2cf75c30" />
+        <classShapeMoniker Id="3b6e57ed-d481-496a-aa87-a868145896cc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6e146d67-fc2c-460c-94eb-ea5670550f49" absoluteBounds="12.125, 7.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ScholarDBDataContext/pago" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23085bed-db21-4cd8-ae62-c33b84ae1d16" absoluteBounds="12.14, 8.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.4687475 : 10.7997054036458); (4.4687475 : 11.1194075520833); (7.16666666666667 : 11.1194075520833 : JumpStart); (7.33333333333333 : 11.1194075520833 : JumpEnd); (10.3229161666667 : 11.1194075520833 : JumpStart); (10.4895828333333 : 11.1194075520833 : JumpEnd); (12.125 : 11.1194075520833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/apoderado/apoderado_pago" />
+      <nodes>
+        <classShapeMoniker Id="f6212429-3011-4883-96d9-33a7dcb36f65" />
+        <classShapeMoniker Id="6e146d67-fc2c-460c-94eb-ea5670550f49" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 10.9319075520833); (10.3229161666667 : 10.9319075520833 : JumpStart); (10.4895828333333 : 10.9319075520833 : JumpEnd); (10.7760434166667 : 10.9319075520833 : JumpStart); (10.9427100833333 : 10.9319075520833 : JumpEnd); (12.125 : 10.9319075520833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ScholarDBDataContext/contrato/contrato_pago" />
+      <nodes>
+        <classShapeMoniker Id="3b6e57ed-d481-496a-aa87-a868145896cc" />
+        <classShapeMoniker Id="6e146d67-fc2c-460c-94eb-ea5670550f49" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

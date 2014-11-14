@@ -1,0 +1,788 @@
+﻿/*************************************************************************/
+				/* Additional Demurrage Classes */
+/*************************************************************************/
+html {
+    height:100%; 
+    max-height:100%; 
+    padding:0; 
+    margin:0; 
+    border:0; 
+	overflow: hidden;
+}
+
+body 
+{
+	height:100%; 
+	max-height:100%; 
+	overflow:hidden; 
+	padding:0; 
+	margin:0; 
+	border:0;
+}
+
+.FooterPadding 
+{ 
+	padding-bottom: 15px; 
+}
+
+.pad1 
+{
+	display:block; 
+	width:15px; 
+	height:45px; 
+	float:left;
+}
+
+.pad2 
+{
+	display:block; 
+	height:50px;
+}
+
+.padLine 
+{
+	display:block; 
+	height:3px;
+}
+
+.padDarkLine
+{
+	display:block; 
+	height:1px;
+	background-color: #899cc5;
+}
+
+.padDarkLineDouble
+{
+	display:block; 
+	height:8px;
+	background-color: #899cc5;
+}
+
+.frame
+{
+	border:solid 1px #899cc5;
+}
+
+.padVerticalDarkLine
+{ 
+	width: 0px;
+	background-color: #899cc5;
+}
+
+.tdLikeMenu {
+	background-color : #336699;
+	color : #ffffff;
+	vertical-align : top;
+}
+
+.TextBoxInvalid 
+{
+	background-color: #fccbcb;
+	color: Blue;
+}
+
+.ToolBar
+{
+	 height: 23px;
+	 background-color: White;
+}
+
+.LabelDisabled
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px ;
+	color: #899cc5;
+}
+
+.ButtonDisable
+{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	color :gray;
+	border: 1px solid #024A9B;
+	background-color: #dcdcdc;
+	width: 40px;
+	height: 19px;
+}
+
+.ButtonLupa
+{
+    font-family: tahoma, verdana, arial, helvetica;
+    font-size: 12px;
+    color: gray;
+    border: 1px solid #024A9B;
+    background-color: #dcdcdc;
+    width: 17px;
+    height: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.PopUpPanel
+{
+    position: absolute; 
+	background-color: White;
+	border:solid 1px #667ba9;
+	overflow: auto;
+	margin-left: 2px;
+	filter: alpha(opacity=90);
+}
+
+.PopUpPanelTable
+{
+	background-color: #f1f4f9;
+	border-collapse: collapse;
+}
+
+.PopUpPanelTable tr 
+{
+	background-color: #f1f4f9;
+	border: solid 1px Blue;
+	cursor: default;
+}
+
+.PopUpPanelTable td 
+{
+	border: solid 1px Blue;
+}
+
+.PopUpPanelTable tr:hover
+{
+	background-color: White;
+	color: Red;
+	cursor: pointer;
+}
+
+.LabelPanelSubtitle
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 13px ;
+	color: #210e4c;	
+}
+
+.btnMainHeader
+{
+    background-color: #dfe6f4;
+    color: #4a67a0;
+    height: 15px;
+    width: 30px;
+}
+
+.btnDetail
+{
+	background-image: url(../images/icons/detail.jpg);	
+	border: none;
+	width:16px;
+	height:16px;
+	cursor :hand;
+}
+
+.btnDetail2
+{
+	border: 1px solid #4a67a0;
+	width:13px;
+	height:13px;
+	cursor :hand;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	background-color: #f1f4f9;
+	color: #00007f;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 2px;
+}
+
+.btnDetail2:hover 
+{
+	background-color: White;
+	border-color: #0056ff;
+	color: #0000ff;
+	cursor: pointer;
+}
+
+.btnDetail2Disabled 
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size:13px;
+	background-color: #f1f4f9;
+	border: solid 1px #899cc5;
+	color: #656599;
+	text-decoration: none;
+	cursor: default;
+}
+
+.btnNew
+{
+	background-image: url(../images/icons/new.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+
+.btnRefresh
+{
+	background-image: url(../images/icons/refresh.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnDetail
+{
+	background-image: url(../images/icons/detail.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnNew:hover
+{
+	background-image: url(../images/icons/new_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnFind
+{
+	background-image: url(../images/icons/find.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.tbtnNew
+{
+	background: url(../images/icons/new.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.tbtnNew:hover
+{
+	background: url(../images/icons/new_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.tbtnSearch
+{
+	background-image: url(../images/icons/find.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+
+.dbtnSearch
+{
+	width:50px;
+    padding-top:3px;
+    padding-bottom: 3px;
+    padding-right:5px;
+    
+}
+
+.dbtnAdd
+{
+	width:50px;
+    padding-top:3px;
+    padding-bottom: 3px;
+    padding-right:5px;
+    
+}
+
+
+.btnFind:hover
+{
+	background-image: url(../images/icons/find_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnSave
+{
+	background-image: url(../images/icons/save.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnSave:hover
+{
+	background-image: url(../images/icons/save_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnEdit
+{
+	background-image: url(../images/icons/edit.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnA
+{
+	background-image: url(../images/icons/a.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+.btnA:hover
+{
+	background-image: url(../images/icons/a_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnTicket
+{
+	background-image: url(../images/icons/ticket.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+.btnTicket:hover
+{
+	background-image: url(../images/icons/ticket_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnFinished
+{
+	background-image: url(../images/icons/finished.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+.btnFinished:hover
+{
+	background-image: url(../images/icons/finished_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnPrint
+{
+	background-image: url(../images/icons/print.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnPrint:hover
+{
+	background-image: url(../images/icons/print_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnMail
+{
+	background-image: url(../images/icons/mail.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnMail:hover
+{
+	background-image: url(../images/icons/mail_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnTemplate
+{
+	background-image: url(../images/icons/template.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+.btnTemplate:hover
+{
+	background-image: url(../images/icons/template_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+
+.btnCancelOrder
+{
+	background-image: url(../images/icons/cancel.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnCancelOrder:hover
+{
+	background-image: url(../images/icons/cancel_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnExit
+{
+	background-image: url(../images/icons/exit.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnExit:hover
+{
+	background-image: url(../images/icons/exit_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnEdit:hover
+{
+	background-image: url(../images/icons/edit_hover.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.btnEditDisabled
+{
+	background-image: url(../images/icons/edit_disabled.gif);	
+	border: none;
+	width:23px;
+	height:22px;
+}
+
+.deleteRowButton 
+{
+	background-image: url(../images/icons/RowDelete.gif);	
+	border: none;
+	width:18px;
+}
+
+.closeButton 
+{
+	background-image: url(../images/icons/closebutton.gif);	
+	border: none;
+	width:13px;
+	height:13px;
+}
+
+.closeButton:hover
+{
+	cursor:pointer;
+}
+
+.modalBackground
+{
+	background-color:#000;
+	filter:alpha(opacity=70);
+	opacity:0.8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+
+.modalProgressBackground
+{
+	background-color:#000;
+	filter:alpha(opacity=10);
+	opacity:0.2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+}
+
+.modalWindow
+{
+    position: fixed;
+	overflow: auto;
+	z-index: 31;
+	background-color: white;
+	display: none;
+	border: 1px solid blue;	
+}
+
+.GridTable
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	border-collapse: collapse;
+	border: solid 1px #637cb0;
+}
+
+.GridTable thead tr
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	background-color: #637cb0;
+	border: solid 1px #637cb0;
+}
+
+.GridTable th
+{
+	border: solid 1px #ffffff;
+	color : #ffffff;
+	background-color: #637cb0;
+	cursor: default;
+}
+
+.GridTable tbody
+{
+	cursor: pointer;
+	color: #5b5a5a;
+}
+
+.GridTable tbody tr
+{
+	background-color: #f1f4f9;
+	border: solid 1px #899cc5;
+	color : #5b5a5a;
+}
+
+.GridTable tbody td
+{
+	border: solid 1px #899cc5;
+}
+
+.GridTable tbody tr:hover
+{
+	background-color: #ffffff;
+	color: #0000ff;
+}
+
+
+
+
+.GridTable_1
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	border-collapse: collapse;
+	border: solid 1px #637cb0;
+}
+
+.GridTable_1 thead tr
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+	background-color: #637cb0;
+	border: solid 1px #637cb0;
+}
+
+.GridTable_1 th
+{
+	border: solid 1px #ffffff;
+	color : #ffffff;
+	background-color: #637cb0;
+	cursor: default;
+}
+
+
+.GridTable_1 tr
+{
+	background-color: #f1f4f9;
+	border: solid 1px #899cc5;
+	color : #5b5a5a;
+}
+
+.GridTable_1 td
+{
+	border: solid 1px #899cc5;
+}
+
+
+
+
+
+.linkButton
+{
+	border: 1px solid #4a67a0;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+		font-size:13px;
+		background-color: #f1f4f9;
+		color: #00007f;
+		text-decoration: none;
+		padding-bottom:2px;
+		padding-left:5px;
+		padding-right:7px;
+		min-width:25px;
+		text-align: center;
+	}
+
+.linkButtonTitle
+{
+	border: 1px solid #4a67a0;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+		font-size:13px;
+		background-color: #f1f4f9;
+		color: #00007f;
+		text-decoration: none;
+		padding-bottom:2px;
+		padding-left:8px;
+		padding-right:7px;
+		min-width:25px;
+		height:15px;
+	text-align: center;
+	width: 80px;
+}
+
+.linkButtonLupa
+{
+    border: 1px solid #4a67a0;
+    font-family: Tahoma, Verdana, Arial, Helvetica;
+    font-size: 13px;
+    background-color: #f1f4f9;
+    color: #00007f;
+    text-decoration: none;
+    padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+}
+
+.linkButton:hover 
+{
+	background-color: White;
+	border-color: #0056ff;
+	color: #0000ff;
+	cursor: pointer;
+}
+
+.linkButtonDisabled 
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size:13px;
+	background-color: #f1f4f9;
+	border-style:solid;
+	border-width:1px;
+	border-color:#899cc5;
+	color: #656599;
+	text-decoration: none;
+	padding-bottom:2px;
+	padding-left:8px;
+	padding-right:7px;
+	min-width:25px;
+	height:15px;
+	text-align: center;
+	cursor: default;
+	width: 65px;
+}
+
+.linkButtonDiv
+{
+	margin:2px;
+	margin-bottom:5px;
+	color:blue;
+}
+
+
+/*prueba*/
+.linkButtonDiv:Search
+{
+	margin:2px;
+	margin-bottom:5px;
+	width:100;
+	
+}
+
+.ratesHeader
+{
+    font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight:bold;
+    border: solid 1px #ffffff;
+	color : #ffffff;
+	background-color: #637cb0;
+}
+
+.folder_closed
+{
+	background-image: url('/images/icons/folder_closed.gif');
+}
+
+.folder_open
+{
+	background-image: url('/images/icons/folder_open.gif');
+}
+
+
+/* Validator Callout classes */
+.CustomValidatorCalloutStyle div, .CustomValidatorCalloutStyle td {border:solid 1px blue;background-color:#fafcb9;}
+.CustomValidatorCalloutHighLightStyle div, .CustomValidatorCalloutHighLightStyle td {border:solid 1px blue;background-color:#f7faa0;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_popup_table {display: block;border:none;background-color: black;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_popup_table_row {vertical-align:top;height:100%;background-color:transparent;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_cell {width:20px;height:100%;text-align:right;vertical-align:top;border:none;background-color:transparent;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_table {height:100%;border:none;background-color:transparent;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_table_row {background-color:transparent;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_arrow_cell {padding:8px 0px 0px 0px;text-align:right;vertical-align:top;font-size:1px;border:none;background-color:transparent;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv {font-size:1px;position:relative;left:1px;border-bottom:none;border-right:none;border-left:none;width:15px;background-color:transparent;padding:0px;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv div {height:1px;overflow:hidden;border-top:none;border-bottom:none;border-right:none;padding:0px;margin-left:auto;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_error_message_cell {font-family:Verdana;font-size:10px;padding:5px;border-right:none;border-left:none;width:100%;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_icon_cell {width:20px;padding:5px;border-right:none;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_close_button_cell {vertical-align:top;padding:0px;text-align:right;border-left:none;}
+.CustomValidatorCalloutStyle .ajax__validatorcallout_close_button_cell .ajax__validatorcallout_innerdiv {border:none;text-align:center;width:10px;padding:5px;cursor:pointer;}
+
+/* Calendar classes */
+.CustomCalendarStyle .ajax__calendar_container { z-index:5; background-color: White; color:#336699; border:solid 1px Blue; padding:4px;position:absolute;cursor:default;width:170px;font-size:11px;text-align:center;font-family:tahoma,verdana,helvetica;}
+.CustomCalendarStyle .ajax__calendar_body {height:139px;width:170px;position:relative;overflow:hidden;margin:auto;}
+.CustomCalendarStyle .ajax__calendar_days, .ajax__calendar_months, .ajax__calendar_years {top:0px;left:0px;height:139px;width:170px;position:absolute;text-align:center;margin:auto;}
+.CustomCalendarStyle .ajax__calendar_container TABLE {font-size:11px;}
+.CustomCalendarStyle .ajax__calendar_header {height:20px;width:100%;}
+.CustomCalendarStyle .ajax__calendar_prev {cursor:pointer;width:15px;height:15px;float:left;background-repeat:no-repeat;background-position:50% 50%;background-image:url(<%=WebResource("AjaxControlToolkit.Calendar.arrow-left.gif")%>);}
+.CustomCalendarStyle .ajax__calendar_next {cursor:pointer;width:15px;height:15px;float:right;background-repeat:no-repeat;background-position:50% 50%;background-image:url(<%=WebResource("AjaxControlToolkit.Calendar.arrow-right.gif")%>);}
+.CustomCalendarStyle .ajax__calendar_title { color:Red; cursor:pointer;font-weight:bold;}
+.CustomCalendarStyle .ajax__calendar_footer {height:15px;}
+.CustomCalendarStyle .ajax__calendar_today {cursor:pointer;padding-top:3px;}
+.CustomCalendarStyle .ajax__calendar_dayname {color:#336699; font-weight:bold; height:17px;width:17px;text-align:right;padding:0 2px;}
+.CustomCalendarStyle .ajax__calendar_day {height:17px;width:18px;text-align:right;padding:0 2px;cursor:pointer;}
+.CustomCalendarStyle .ajax__calendar_month {height:44px;width:40px;text-align:center;cursor:pointer;overflow:hidden;}
+.CustomCalendarStyle .ajax__calendar_year {height:44px;width:40px;text-align:center;cursor:pointer;overflow:hidden;}
+
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_container {border:1px solid #646464;background-color:#ffffff;color:#000000;}
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_footer {border-top:1px solid #f5f5f5; color:#336699;}
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_dayname {border-bottom:1px solid #f5f5f5;}
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_day {border:1px solid #ffffff;}
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_month {border:1px solid #ffffff;}
+.CustomCalendarStyle .ajax__calendar .ajax__calendar_year {border:1px solid #ffffff;}
+
+.CustomCalendarStyle .ajax__calendar_active .ajax__calendar_day {background-color:White; border:solid 1px Red; color:#336699; font-weight:bold;}
+.CustomCalendarStyle .ajax__calendar_active .ajax__calendar_month {background-color:#edf9ff;border-color:#0066cc;color:#0066cc;}
+.CustomCalendarStyle .ajax__calendar_active .ajax__calendar_year {background-color:#edf9ff;border-color:#0066cc;color:#0066cc;}
+
+.CustomCalendarStyle .ajax__calendar_other .ajax__calendar_day {background-color:#ffffff;border-color:#ffffff;color:#646464;}
+.CustomCalendarStyle .ajax__calendar_other .ajax__calendar_year {background-color:#ffffff;border-color:#ffffff;color:#646464;}
+
+.CustomCalendarStyle .ajax__calendar_hover .ajax__calendar_day {background-color:#dfe6f4;border-color:#daf2fc;color:#0066cc;}
+.CustomCalendarStyle .ajax__calendar_hover .ajax__calendar_month {background-color:#edf9ff;border-color:#daf2fc;color:#0066cc;}
+.CustomCalendarStyle .ajax__calendar_hover .ajax__calendar_year {background-color:#edf9ff;border-color:#daf2fc;color:#0066cc;}
+
+.CustomCalendarStyle .ajax__calendar_hover .ajax__calendar_title {color:#0066cc;}
+.CustomCalendarStyle .ajax__calendar_hover .ajax__calendar_today {color:#336699;}

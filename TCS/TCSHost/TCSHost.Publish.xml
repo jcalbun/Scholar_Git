@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/TCSHost" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="http://localhost/TCSHost" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="02/06/2014 01:51:23" />
+    <file relUrl="bin/TCSDOTranslator.pdb" publishTime="03/21/2014 16:41:43" />
+    <file relUrl="bin/TCSBusinessActions.pdb" publishTime="03/21/2014 16:41:45" />
+    <file relUrl="bin/TCSHost.dll" publishTime="03/21/2014 16:41:46" />
+    <file relUrl="bin/TCSBusinessEntities.dll" publishTime="03/03/2014 01:55:58" />
+    <file relUrl="TCSWcfService.svc" publishTime="08/13/2012 13:40:32" />
+    <file relUrl="bin/TCSDOTranslator.dll" publishTime="03/21/2014 16:41:43" />
+    <file relUrl="bin/TCSDataClasses.dll" publishTime="03/21/2014 16:41:43" />
+    <file relUrl="bin/TCSHost.pdb" publishTime="03/21/2014 16:41:46" />
+    <file relUrl="bin/TCSWcfService.dll" publishTime="03/21/2014 16:41:46" />
+    <file relUrl="bin/TCSDataContract.dll" publishTime="03/03/2014 01:53:14" />
+    <file relUrl="bin/TCSDCTranslator.pdb" publishTime="03/03/2014 01:56:02" />
+    <file relUrl="bin/TCSGateway.dll" publishTime="03/21/2014 16:41:44" />
+    <file relUrl="bin/TCSDataContract.pdb" publishTime="03/03/2014 01:53:14" />
+    <file relUrl="bin/TCSBusinessEntities.pdb" publishTime="03/03/2014 01:55:58" />
+    <file relUrl="bin/TCSBusinessActions.dll" publishTime="03/21/2014 16:41:45" />
+    <file relUrl="bin/TCSQueries.pdb" publishTime="03/21/2014 16:41:44" />
+    <file relUrl="bin/TCSDCTranslator.dll" publishTime="03/03/2014 01:56:02" />
+    <file relUrl="bin/TCSDataClasses.pdb" publishTime="03/21/2014 16:41:43" />
+    <file relUrl="bin/TCSGateway.pdb" publishTime="03/21/2014 16:41:44" />
+    <file relUrl="Default.aspx" publishTime="08/13/2012 13:40:32" />
+    <file relUrl="bin/TCSQueries.dll" publishTime="03/21/2014 16:41:44" />
+    <file relUrl="bin/TCSWcfService.pdb" publishTime="03/21/2014 16:41:46" />
+  </publishProfile>
+</publishData>

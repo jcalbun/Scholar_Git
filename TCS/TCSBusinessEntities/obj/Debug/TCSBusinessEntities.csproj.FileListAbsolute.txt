@@ -1,0 +1,10 @@
+C:\Proyectos\TCS\TCSBusinessEntities\bin\Debug\TCSBusinessEntities.dll
+C:\Proyectos\TCS\TCSBusinessEntities\bin\Debug\TCSBusinessEntities.pdb
+C:\Proyectos\TCS\TCSBusinessEntities\obj\Debug\ResolveAssemblyReference.cache
+C:\Proyectos\TCS\TCSBusinessEntities\obj\Debug\TCSBusinessEntities.dll
+C:\Proyectos\TCS\TCSBusinessEntities\obj\Debug\TCSBusinessEntities.pdb
+C:\CodeMangusta\TCS\TCSBusinessEntities\bin\Debug\TCSBusinessEntities.dll
+C:\CodeMangusta\TCS\TCSBusinessEntities\bin\Debug\TCSBusinessEntities.pdb
+C:\CodeMangusta\TCS\TCSBusinessEntities\obj\Debug\TCSBusinessEntities.dll
+C:\CodeMangusta\TCS\TCSBusinessEntities\obj\Debug\TCSBusinessEntities.pdb
+C:\CodeMangusta\TCS\TCSBusinessEntities\obj\Debug\TCSBusinessEntities.csprojResolveAssemblyReference.cache

@@ -1,0 +1,184 @@
+﻿.labelHeader
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 14px;
+	font-style:oblique;
+	font-weight:bold;
+}
+
+
+.msgBox /*copia de .panel csav.css*/
+{
+	background-color :#dfe6f4;
+	border-style:solid;
+	border-width:1px;
+	border-color: #4a67a0;
+}
+
+#divContent 
+{
+	display: block; 
+	height:100%;
+	overflow: hidden; 
+	z-index:3; 
+}
+
+#divFooter 
+{
+	position:absolute; 
+	margin:0; 
+	bottom:-1px; 
+	padding-bottom:2px;
+	right:18px; 
+	display:block; 
+	width:100%; 
+	text-align:right; 
+	z-index:4; 
+	border-top:1px solid #000;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #999ACE;
+	background-color: #F3F3F3;
+	text-align: center;
+}
+
+
+#content 
+{
+	display: block; 
+	height:100%;
+	overflow: hidden; 
+	z-index:3; 
+}
+
+#InnerContent
+{
+	overflow:hidden;
+	height:100%;
+}
+
+#ContentPagesDiv
+{
+	position: relative;
+	top: 47px;
+	height:100%;
+	overflow: auto;
+}
+
+#ContentPagesIFrame
+{
+	width:100%; 
+	height:100%; 
+	border:0;
+	overflow: auto;
+}
+
+#header 
+{
+	position:absolute; 
+	margin:0; 
+	top:0; 
+	right:18px; 
+	display:block; 
+	width:100%; 
+	height:45px; 
+	background:#011b4c; 
+	z-index:5; 
+	color:#000; 
+	border-bottom:1px solid #000;
+}
+
+.InfoPanel
+{
+   position: absolute;
+   top: 2px;
+   right: 2px;
+}
+
+#footer 
+{
+	position:absolute; 
+	margin:0; 
+	bottom:-1px; 
+	padding-bottom:2px;
+	right:18px; 
+	display:block; 
+	width:100%; 
+	text-align:right; 
+	z-index:4; 
+	border-top:1px solid #000;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #999ACE;
+	background-color: #F3F3F3;
+	text-align: center;
+}
+
+#divMenuSideBar
+{
+	float:left;
+	background:#011b4c;
+	color: White;
+	margin-right:1px;
+	height:700px;
+	
+}
+
+#divHeader
+{
+	background:#011b4c;
+	color: White;
+	margin-right:1px;
+}
+
+.MenuListItem
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform : capitalize;	
+	text-decoration: none;
+	cursor: default;
+	background-color:#007F7F;
+	padding: 2px;
+}
+
+.MenuListItem:hover
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform : capitalize;	
+	cursor:default;
+	padding: 2px;
+}
+
+.SubMenuListItem
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform : capitalize;	
+	text-decoration: none;
+	cursor: default;
+	padding:2px;
+	padding-left: 10px;
+}
+
+.SubMenuListItem:hover
+{
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	color: #fc575d;
+	text-transform : capitalize;	
+	text-decoration: underline;
+	cursor:pointer;
+	padding:2px;
+	padding-left: 10px;
+}

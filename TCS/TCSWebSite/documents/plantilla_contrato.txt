@@ -1,0 +1,105 @@
+<FlowDocument PageWidth="816" PageHeight="1056" PagePadding="96,96,96,96" AllowDrop="True" NumberSubstitution.CultureSource="User" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Paragraph Margin="0,0,0,0" TextAlignment="Center" FontFamily="Calibri" FontWeight="Bold" FontSize="16">
+    <Span xml:lang="es-es">CONTRATO DE PRESTACION DE SERVICIOS</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,0" TextAlignment="Center" FontFamily="Calibri" FontWeight="Bold" FontSize="16">
+    <Span xml:lang="es-es">DE TRANSPORTE ESCOLAR</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,0" TextAlignment="Center" FontFamily="Times New Roman" FontSize="16" />
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Center" FontFamily="Times New Roman" FontSize="4" />
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">En Osorno, a 05 de  Marzo del 2013, entre el transportista</Span>
+    <Span xml:lang="es-es"> escolar, Señ</Span>
+    <Span xml:lang="es-es" xml:space="preserve">or </Span>
+    <Span FontWeight="Bold" xml:lang="es-es">Jose Victor Calbun Miranda</Span>
+    <Span xml:lang="es-es" xml:space="preserve">, RUN 7834459-8, domiciliado en  P</Span>
+    <Span xml:lang="es-es">je. Ollagüe Nº</Span>
+    <Span xml:lang="es-es"> 1068 Villa Almagro II, fono 230992; y el apoder</Span>
+    <Span xml:lang="es-es">ado Señ</Span>
+    <Span xml:lang="es-es" xml:space="preserve">or(a)  SHIRLEY FLORES HERNANDEZ   RUN  16237725-6 d</Span>
+    <Span xml:lang="es-es" xml:space="preserve">omiciliado(a) en  AVDA.LA MAYOR SUR Nº</Span>
+    <Span xml:lang="es-es" xml:space="preserve">2015  fono 65078934  se ha convenido lo siguiente:</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Times New Roman" FontSize="13.3333333333333">
+    <Span FontFamily="Calibri" xml:lang="es-es" xml:space="preserve">1.- Don Jose Victor Calbun Miranda, se obliga a transportar el/la menor  ROCIO D. CERECEDA FLORES  desde  y   hacia el Colegio SAN JOSE </Span>
+    <Span FontFamily="Calibri" FontWeight="Bold" xml:lang="es-es" xml:space="preserve">  Curso:  1er</Span>
+    <Span FontFamily="Calibri" FontWeight="Bold" xml:lang="es-es" xml:space="preserve">  AÑ</Span>
+    <Span FontFamily="Calibri" FontWeight="Bold" xml:lang="es-es">O A</Span>
+    <Span FontFamily="Calibri" xml:lang="es-es" xml:space="preserve">  de lunes a viernes  HORARIOS NORMALES DE  CLASES </Span>
+    <Span FontFamily="Calibri" FontWeight="Bold" xml:lang="es-es" xml:space="preserve"> </Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">2.- Sera de responsabilidad del apoderado la entrega del menor en el horario acordado. El incumplimiento de esto </Span>
+    <Span xml:lang="es-es">dará</Span>
+    <Span xml:lang="es-es" xml:space="preserve"> lugar a que el transportista </Span>
+    <Span xml:lang="es-es">continú</Span>
+    <Span xml:lang="es-es">e su recorrido.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">3.- El valor del servicio es de </Span>
+    <Span FontWeight="Bold" xml:lang="es-es" xml:space="preserve">$  26.000 (Veinte y seis mil pesos)</Span>
+    <Span xml:lang="es-es" xml:space="preserve"> </Span>
+    <Span xml:lang="es-es">mensuales, considerá</Span>
+    <Span xml:lang="es-es" xml:space="preserve">ndose para este efecto el pago de </Span>
+    <Span FontWeight="Bold" xml:lang="es-es">Marzo a Diciembre</Span>
+    <Span xml:lang="es-es">, siendo el pago del servicio mes adelantado.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">4.-  La obligació</Span>
+    <Span xml:lang="es-es">n del pago del servicio, no se suspender</Span>
+    <Span xml:lang="es-es">á durante los periodos vacacionales ni por otros motivos de suspensió</Span>
+    <Span xml:lang="es-es">n de clases (paro de profesores), o inasistencias del menor; en estos casos las partes entienden como efectivamente realizado el transporte.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">5.- El servicio no efectuado, y que sea de responsabilidad del transportista escolar, </Span>
+    <Span xml:lang="es-es">dará</Span>
+    <Span xml:lang="es-es"> derecho al descuento en la mensualidad correspondiente.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">6.- El transportista escolar se obliga a dar cumplimiento a las normas y reglamentos vigentes para el transporte urbano o rural de escolares.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">7.- El precio</Span>
+    <Span xml:lang="es-es"> convenido podrá</Span>
+    <Span xml:lang="es-es" xml:space="preserve"> ser </Span>
+    <Span FontWeight="Bold" xml:lang="es-es" xml:space="preserve">reajustado </Span>
+    <Span xml:lang="es-es">en caso de alza de los insumos, como son: combustibles, lubricantes, repuestos, neumáticos, etc, que afecten la operació</Span>
+    <Span xml:lang="es-es" xml:space="preserve">n de un buen servicio de la siguiente manera: </Span>
+    <Span FontWeight="Bold" xml:lang="es-es" xml:space="preserve">si el diesel sube sobre $  700 el litro</Span>
+    <Span xml:lang="es-es" xml:space="preserve">  aceptada por las partes.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">8.- El termino del presente convenio, antes de su vigencia legal, deberá ser comunicado con 30 dias de anticipación. De no ser asi, se deberá</Span>
+    <Span xml:lang="es-es"> cancelar el valor de 1 mes de traslado.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">9.- Sera motivo de caducidad del presente convenio: la morosidad de las cancelaciones, mal comportamiento del menor, el no cumplimiento de los horarios establecidos o el transporte acordado.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es" xml:space="preserve">10.- Las actividades </Span>
+    <Span FontWeight="Bold" xml:lang="es-es">extraprogramaticas, los horarios no establecidos y viajes especiales</Span>
+    <Span xml:lang="es-es">, será</Span>
+    <Span xml:lang="es-es">n considerados al margen de este convenio, y con valores por acordar.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Times New Roman" FontSize="13.3333333333333">
+    <Span FontFamily="Calibri" xml:lang="es-es">11.- El pre</Span>
+    <Span FontFamily="Calibri" xml:lang="es-es">sente convenio regirá</Span>
+    <Span FontFamily="Calibri" xml:lang="es-es" xml:space="preserve"> desde  el  </Span>
+    <Span FontFamily="Calibri" FontWeight="Bold" xml:lang="es-es" xml:space="preserve">05 de Marzo  del 2013 hasta   Diciembre de 2013</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">12.- Para todos los efectos legales, ambas partes fijan su domicilio en la ciudad de Osorno.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">13.- Ante cualquier reclamo, sugerenc</Span>
+    <Span xml:lang="es-es">ia o felicitación, favor dirigirse a: SINDICATO DE TRABAJADORES INDEPENDIENTES DEL TRASNPORTE ESCOLAR Y TURISMO DE OSORNO. CALLE LOS NARCISOS Nª</Span>
+    <Span xml:lang="es-es"> 1720, POBLACION A. OHIGGINS, FONO 239711.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Justify" FontFamily="Calibri" FontSize="13.3333333333333">
+    <Span xml:lang="es-es">14.- Para constancia y conformidad, este convenio de firma en dos ejemplares, quedando uno en poder de cada parte.</Span>
+  </Paragraph>
+  <Paragraph Margin="0,0,0,13.33" TextAlignment="Left" FontFamily="Times New Roman" FontSize="13.3333333333333" />
+  <Paragraph TextAlignment="Center" LineHeight="1.15">
+    <Run xml:lang="es-cl" xml:space="preserve" />
+  </Paragraph>
+</FlowDocument>

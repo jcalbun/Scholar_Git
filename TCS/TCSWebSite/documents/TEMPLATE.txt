@@ -1,0 +1,14 @@
+<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Section>
+    <Section FontFamily="Times New Roman">
+      <Paragraph>@placeholder1</Paragraph>
+      <Paragraph>
+        @placeholder2
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>
+    </Section>
+  </Section>
+</FlowDocument>

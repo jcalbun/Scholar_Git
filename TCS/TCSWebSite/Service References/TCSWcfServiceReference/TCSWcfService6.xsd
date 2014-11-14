@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ltjavier/TCSHost/TCSWcfService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TCSDataContract" />
+  <xs:element name="ValidUserAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_applicationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidUserAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TCSDataContract" minOccurs="0" name="ValidUserAccessResult" nillable="true" type="q1:dc_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_applicationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TCSDataContract" minOccurs="0" name="GetMenuResult" nillable="true" type="q2:dc_Profile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsrUpdatePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_newPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_applicationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsrUpdatePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TCSDataContract" minOccurs="0" name="UsrUpdatePasswordResult" nillable="true" type="q3:dc_User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTcsUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTcsUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TCSDataContract" minOccurs="0" name="GetTcsUsersResult" nillable="true" type="q4:ArrayOfdc_TcsUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

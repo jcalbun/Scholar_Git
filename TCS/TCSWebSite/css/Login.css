@@ -1,0 +1,91 @@
+﻿
+.LoginPanel
+{
+	 width: 320px;
+	 height: 200px;
+	 border-width: 2px;
+	 background-color:#011b4c;
+	 border-color:White;
+	 margin-right:5px;
+}
+
+#LoginTable
+{
+	background-color:#011b4c;
+	width:100%;
+	height:100%;
+	color: White;
+	float: left;
+}
+
+#LoginContentTable
+{
+	width:100%; 
+	height:100%;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 14px;
+}
+
+.lblUserAccount
+{
+	 padding-bottom:10px;
+	 padding-right:5px;
+	 Font-Size: 18px;
+}
+
+.LoginLabels
+{
+	 padding-right:5px;
+	 color: White;
+}
+
+.LoginTextboxes
+{
+	border-width:2px;
+	border-style:solid;
+	border-color: #b4eeff;
+	width: 120px;
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 14px;
+}
+
+.LoginTextboxesHover
+{
+	border-color: #f8fd5a;
+	border-width: 2px;
+	border-style:solid;
+	width: 120px;
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 14px;
+}
+
+.lbLogIn 
+{
+	background-color:#ff3339;
+	border-style:solid;
+	border-width:1px;
+	border-color:White;
+	padding-left:5px;
+	padding-right:0px;
+	text-decoration: none;
+	color: White;
+	padding-bottom:2px;
+	padding-left:20px;
+	padding-right:21px;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size:13px;
+}
+
+.lbLogIn:hover
+{
+	background-color:#fc575d;
+	border-color:White;
+	color:White;
+}
+
+#LoginButtonDiv 
+{
+    margin-top:5px;
+	margin-right:0px;
+	margin-bottom:5px;
+}
